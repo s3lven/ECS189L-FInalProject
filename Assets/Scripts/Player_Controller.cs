@@ -78,19 +78,19 @@ public class Player_Controller : MonoBehaviour
     {
         if(context.phase == InputActionPhase.Performed)
         {
-            Debug.Log("Interacted");
             RaycastHit hit;
             Ray ray = camera.ScreenPointToRay(mousePositionInput);
             if(Physics.Raycast(ray, out hit, interactLayer))
             {
                 if(hit.transform.tag == "Interactable")
                 {
-                    if(!hit.transform.GetChild(0).gameObject.activeInHierarchy)
+                    Debug.Log("Interacted");
+                    if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
                     {
                         return;
                     }
                     Interactable temp = hit.transform.GetComponent<Interactable>();
-                    // temp.PlayMiniGame();
+                    temp.PlayMiniGame();
                 }
             }
         }

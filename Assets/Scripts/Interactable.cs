@@ -31,8 +31,7 @@ GameObject highlight;
 
     public void PlayMiniGame()
     {
-        Debug.Log("I'm playing the minigame");
-        // miniGame.SetActive(true);
+        miniGame.SetActive(true);
     }
 
     // Start is called before the first frame update
