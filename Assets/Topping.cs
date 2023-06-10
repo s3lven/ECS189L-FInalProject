@@ -1,17 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Topping : MonoBehaviour
+public class Topping : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private bool dragging;
-    
-    void Update()
+    [HideInInspector] public Transform parentAfterDrag;
+    public Image image;
+
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        
+        // Debug.Log("Begin Drag");
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
+
+        image.raycastTarget = false;
     }
-    void OnMouseDown() {
-        dragging = true;
-        Debug.Log("Draggin!");
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        // Debug.Log("Dragging");
+        transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        // Debug.Log("End Drag");
+        transform.SetParent(parentAfterDrag);
+        image.raycastTarget = true;
     }
 }
+    
