@@ -5,8 +5,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 
-[SerializeField] GameObject miniGame;
-GameObject highlight;
+    [SerializeField] GameObject miniGame;
+    GameObject highlight;
 
     private void OnEnable()
     {
