@@ -5,10 +5,25 @@ using UnityEngine;
 public class PressButtonMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
+    [SerializeField] public GameObject player;
+    Player_Controller playerController;
 
     public void PressButtonPanelClose()
     {
         GamePanel.SetActive(false);
+    }
+
+    void OnEnable()
+    {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        playerController.canMove = false;
+        playerController.interactionBinding.Disable();
+    }
+
+    void OnDisable()
+    {
+        playerController.canMove = true;
+        playerController.interactionBinding.Enable();
     }
 
     public void PressWaitButton()

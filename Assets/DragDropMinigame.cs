@@ -6,7 +6,9 @@ using UnityEngine;
 public class DragDropMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    
+    [SerializeField] public GameObject player;
+    public static Player_Controller playerController;
+
     public void PressButtonPanelClose()
     {
         GamePanel.SetActive(false);
@@ -14,11 +16,14 @@ public class DragDropMinigame : MonoBehaviour
 
     void OnEnable()
     {
-        // Spawn the toppings in their boxes
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        playerController.canMove = false;
+        playerController.interactionBinding.Disable();
+    }
 
-        // Check if the correct topping went into the drink
-
-        // Close window if correct.
-        // GamePanel.SetActive(false);
+    void OnDisable()
+    {
+        playerController.canMove = true;
+        playerController.interactionBinding.Enable();
     }
 }
