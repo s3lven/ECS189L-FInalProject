@@ -104,12 +104,19 @@ public class Player_Controller : MonoBehaviour
 
     public void StopPlayer()
     {
-        this.rigidbody.isKinematic = true;  
+        rigidbody.velocity = new Vector3(0, 0, 0);
+        movementSpeed = 0;
+        canMove = false;
+        interactionBinding.Disable();
+
     }
 
     public void RestartPlayer()
     {
-        this.rigidbody.isKinematic = false;
+        movementSpeed = 5;
+        canMove = true;
+        interactionBinding.Enable();
+
     }
 }
 

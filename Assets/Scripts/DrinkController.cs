@@ -63,7 +63,7 @@ public class DrinkController : MonoBehaviour
     public void CheckDrink()
     {
         Debug.Log("Drink Controller Tea: " + _tea);
-        // Debug.Log("Drink Controller Topping: " + _topping);
+        Debug.Log("Drink Controller Topping: " + _topping);
         // Debug.Log("Drink Controller Syrup Powder: " + _syrupPowder);
         // Debug.Log("Drink Controller Ice: " + _isShakenUp);
         // Debug.Log("Drink Controller Shaked: " + _isShakenUp);

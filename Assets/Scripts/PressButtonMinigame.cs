@@ -6,17 +6,12 @@ using Boba;
 
 public class PressButtonMinigame : MonoBehaviour
 {
-    
     [SerializeField] GameObject GamePanel;
     Player_Controller playerController;
 
     private DrinkController drinkController;
     TeaTypes tea;
 
-    void Awake()
-    {
-        this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
-    }
     public void PressButtonPanelClose()
     {
         GamePanel.SetActive(false);
@@ -24,15 +19,18 @@ public class PressButtonMinigame : MonoBehaviour
 
     void OnEnable()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
-        playerController.canMove = false;
-        playerController.interactionBinding.Disable();
+        playerController.StopPlayer();
     }
 
     void OnDisable()
     {
-        playerController.canMove = true;
-        playerController.interactionBinding.Enable();
+        playerController.RestartPlayer();
+    }
+
+    void Awake()
+    {
+        this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
     }
 
     public void PourTea()
@@ -41,15 +39,15 @@ public class PressButtonMinigame : MonoBehaviour
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         switch (buttonName)
         {
-            case "BlackTeaButton":
+            case "BlackTea_Button":
                 Debug.Log("I poured black tea");
                 tea = TeaTypes.BlackTea;
                 break;
-            case "GreenTeaButton":
+            case "GreenTea_Button":
                 Debug.Log("I poured green tea");
                 tea = TeaTypes.GreenTea;
                 break;
-            case "OolongTeaButton":
+            case "OolongTea_Button":
                 Debug.Log("I poured oolong tea");
                 tea = TeaTypes.OolongTea;
                 break;
@@ -65,7 +63,7 @@ public class PressButtonMinigame : MonoBehaviour
     IEnumerator WaitButtonPressed()
     {
         yield return new WaitForSeconds(5);
-        Debug.Log("You've waited 5 seconds.");
+        // Debug.Log("You've waited 5 seconds.");
         drinkController.CheckDrink();
         PressButtonPanelClose();
     }

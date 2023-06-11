@@ -10,6 +10,8 @@ public class DragDropMinigame : MonoBehaviour
 
     [SerializeField] GameObject cupObject;
     ToppingsType toppings;
+    bool isToppingLoaded;
+    private DrinkController drinkController;
 
     public void PressButtonPanelClose()
     {
@@ -18,39 +20,54 @@ public class DragDropMinigame : MonoBehaviour
 
     void OnEnable()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
-        playerController.canMove = false;
-        playerController.interactionBinding.Disable();
+        playerController.StopPlayer();
+        
     }
 
     void OnDisable()
     {
-        playerController.canMove = true;
-        playerController.interactionBinding.Enable();
+        playerController.RestartPlayer();
+    }
+
+    void Awake()
+    {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
+        isToppingLoaded = false;
     }
 
     void Update()
     {
-        if(cupObject.transform.childCount() > 0)
+        if(cupObject.transform.childCount > 0 && !isToppingLoaded)
         {
-            var objectName = cupObject.transform.name;
-
-            switch (objectName)
-            {
-                case "Boba_Topping":
-                    toppings = TeaTypes.Boba;
-                    break;
-                case "LycheeJelly_Topping":
-                    toppings = TeaTypes.LycheeJelly;
-                    break;
-                case "GrassJelly_Topping":
-                    toppings = TeaTypes.GrassJelly_Topping;
-                    break;
-                default
-                    Debug.Log("There is no topping called " + objectName);
-                    break;
-            }
+           CheckTopping();
         }
+    }
+
+    void CheckTopping()
+    {
+        var objectName = cupObject.transform.GetChild(0).name;
+        isToppingLoaded = true;
+
+        switch (objectName)
+        {
+            case "Boba_Topping":
+                toppings = ToppingsType.Boba;
+                break;
+            case "LycheeJelly_Topping":
+                toppings = ToppingsType.LycheeJelly;
+                break;
+            case "GrassJelly_Topping":
+                toppings = ToppingsType.GrassJelly;
+                break;
+            default:
+                Debug.Log("There is no topping called " + objectName);
+                break;
+        }
+
+        Debug.Log("Topping sent: " + toppings);
+        drinkController.AddIngredient(toppings);
+        drinkController.CheckDrink();
     }
 
 
