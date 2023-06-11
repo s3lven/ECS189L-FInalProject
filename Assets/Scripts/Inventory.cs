@@ -1,25 +1,29 @@
 namespace Boba
 {
+
     public enum TeaTypes
     {
         BlackTea,
         GreenTea,
-        OolongTea
+        OolongTea,
+        None
     }
 
-    public enum Toppings
+    public enum ToppingsType
     {
         Boba,
-        LycheeJelly
+        LycheeJelly,
+        None
     }
 
-    public enum SyrupPowder
+    public enum SyrupPowderType
     {
         Sugar,
         Rose,
         Mango,
-        Taro
+        Taro,
+        None
     }
 
-    
+
 }
