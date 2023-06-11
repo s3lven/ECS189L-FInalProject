@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("run timer");
         stopTimer = false;
         // Set max game time for timer
         timerSlider.maxValue = gameTime;
@@ -26,7 +26,6 @@ public class Timer : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("restarted timer");
         stopTimer = false;
         // Set max game time for timer
         timerSlider.maxValue = gameTime;
@@ -45,9 +44,11 @@ public class Timer : MonoBehaviour
         string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
         // stops timer once time's up
+        // load end screen
         if (time <= 0)
         {
             stopTimer = true;
+            SceneManager.LoadScene("End");
         }
 
         // update timer slider

@@ -7,9 +7,10 @@ public class TitleMenu : MonoBehaviour
 {
     public GameObject controlsPanel;
 
-    public void GoToScene(string sceneName)
+    public void StartGame()
     {
-        SceneManager.LoadScene(sceneName);
+        ScoreController.Reset();
+        SceneManager.LoadScene("Game");
     }
 
     public void OpenPanel()
