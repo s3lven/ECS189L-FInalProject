@@ -14,6 +14,7 @@ public class DrinkController : MonoBehaviour
     public static bool _isShakenUp;
     public static bool _isBlendedUp;
 
+    char[] nameArray;
     void Awake()
     {
         // Zero all parameters
@@ -72,8 +73,7 @@ public class DrinkController : MonoBehaviour
         _isBlendedUp = true;
     }
 
-    // For now it is a debug function.
-    // TODO: Use this function to compare the drink made so far with the recipe.
+    // A debug function.
     public void CheckDrink()
     {
         Debug.Log("Drink Controller Tea: " + _tea);
@@ -97,4 +97,23 @@ public class DrinkController : MonoBehaviour
         _isBlendedUp = false;
     }
 
+    public string EncodeDrink()
+    {
+        var _isIceAddedEncoding = _isIceAdded ? 1 : 0;
+        var _isShakenUpEncoding = _isShakenUp ? 1 : 0;
+        var _isBlendedUpEncoding = _isBlendedUp ? 1 : 0;
+
+        var message = ((int)_tea).ToString() +
+            ((int)_topping).ToString() +
+            ((int)_syrupPowder).ToString() +
+            ((int)_milk).ToString() +
+            _isIceAddedEncoding +
+            _isShakenUpEncoding +
+            _isBlendedUpEncoding;
+        // Debug.Log(message);
+
+        return message;
+    }
+
 }
+

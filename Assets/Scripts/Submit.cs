@@ -6,6 +6,7 @@ public class Submit : MonoBehaviour
 {
     // Yellow highlight that surrounds the interactable when the player is near
     GameObject highlight;
+    OrderController orderController;
 
     // Grabs the highlight object
     private void OnEnable()
@@ -30,11 +31,17 @@ public class Submit : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        orderController = GameObject.FindObjectOfType<OrderController>();
+    }
+
     // Called when the user left clicks the interactable. Turns on the minigame panel.
     public void PlayMiniGame()
     {
         // Grab the recipe
         // Grab the drink from the DrinkController
         // Compare to see if they have all the ingredients
+        orderController.checkEncoding();
     }
 }

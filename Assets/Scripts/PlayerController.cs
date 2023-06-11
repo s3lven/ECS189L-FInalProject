@@ -100,6 +100,12 @@ public class PlayerController : MonoBehaviour
                     Interactable temp = hit.transform.GetComponent<Interactable>();
                     temp.PlayMiniGame();
                 }
+
+                if(hit.transform.tag == "Submit")
+                {
+                    Submit temp = hit.transform.GetComponent<Submit>();
+                    temp.PlayMiniGame();
+                }
             }
         }
     }
