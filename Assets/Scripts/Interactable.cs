@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-
+    // Minigame that will start when interacted with
     [SerializeField] GameObject miniGame;
+    // Yellow highlight that surrounds the interactable when the player is near
     GameObject highlight;
 
+    // Grabs the highlight object
     private void OnEnable()
     {
         highlight = transform.GetChild(0).gameObject;
     }
 
+    // When the player's colllider hits the box's, light up
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -29,6 +32,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    // Called when the user left clicks the interactable. Turns on the minigame panel.
     public void PlayMiniGame()
     {
         miniGame.SetActive(true);

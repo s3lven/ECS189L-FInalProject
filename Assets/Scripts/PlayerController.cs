@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody rigidbody;
     Transform avatar;
 
-    // Player Movement
+    // Player Movement -- uses Unity's new Input System
     [SerializeField] public InputAction inputAction;
     [SerializeField] float movementSpeed;
     Vector2 movementInput;
+    // Member used to disable movement
     public bool canMove;
 
     // Interaction
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         // Assign the sprite to the player so we can move it
         avatar = transform.GetChild(0);
+        // Camera used to raycast on interactables
         camera = Camera.main;
         canMove = true;
 
@@ -90,11 +92,12 @@ public class PlayerController : MonoBehaviour
             {
                 if(hit.transform.tag == "Interactable")
                 {
-                    // Debug.Log("Interacted");
+                    // TBH i forgot what this if block is for.
                     if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
                     {
                         return;
                     }
+                    // Grab the interactable that is clicked on and open its panel
                     Interactable temp = hit.transform.GetComponent<Interactable>();
                     temp.PlayMiniGame();
                 }
@@ -102,6 +105,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Stops the player from moving or interacting so the focus is on the minigame
+    // Velocity set to 0 to prevent moving players to continue moving when interacting an object
     public void StopPlayer()
     {
         rigidbody.velocity = new Vector3(0, 0, 0);
@@ -116,7 +121,6 @@ public class PlayerController : MonoBehaviour
         movementSpeed = 5;
         canMove = true;
         interactionBinding.Enable();
-
     }
 }
 

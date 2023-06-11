@@ -40,8 +40,9 @@ public class ShakeMinigame : MonoBehaviour
     IEnumerator WaitButtonPressed()
     {
         yield return new WaitForSeconds(5);
+        // Play sound here to signify completion
         Debug.Log("Drink is shaked!!");
-        drinkController.CheckDrink();
+        // drinkController.CheckDrink();
         PressButtonPanelClose();
     }
 }

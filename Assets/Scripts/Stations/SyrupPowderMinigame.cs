@@ -35,6 +35,7 @@ public class SyrupPowderMinigame : MonoBehaviour
     public void PourSyrupTea()
     {
         // Debug.Log("Minigame Start!");
+        // Check which button is pressed and assign the ingredient
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         switch (buttonName)
         {
@@ -52,14 +53,16 @@ public class SyrupPowderMinigame : MonoBehaviour
         }
         // Debug.Log("Wait Start");
         StartCoroutine(WaitButtonPressed());
+        // Add the ingredient in the controller
         drinkController.AddIngredient(syrupPowder);
     }
 
     IEnumerator WaitButtonPressed()
     {
         yield return new WaitForSeconds(5);
-        // Debug.Log("You've waited 5 seconds.");
-        drinkController.CheckDrink();
+        // Debug.Log("Syrup/Powder poured");
+        // Play sound here to signify completion
+        // drinkController.CheckDrink();
         // PressButtonPanelClose();
     }
 }

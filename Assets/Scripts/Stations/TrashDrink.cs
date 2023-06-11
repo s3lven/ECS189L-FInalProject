@@ -32,10 +32,13 @@ public class TrashDrink : MonoBehaviour
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
     }
 
+    // Public function that uses the DrinkController's zero function to reset drink
     public void ThrowDrinkAway()
     {
         drinkController.TrashDrink();
-        drinkController.CheckDrink();
+        // Debug function
+        // drinkController.CheckDrink();
+        // Play sound here to signify completion
         PressButtonPanelClose();
         
     }

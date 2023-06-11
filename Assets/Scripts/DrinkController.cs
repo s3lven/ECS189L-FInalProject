@@ -5,6 +5,7 @@ using Boba;
 
 public class DrinkController : MonoBehaviour
 {
+    // All stats that are tracked within a drink
     public static TeaTypes _tea;
     public static ToppingsType _topping;
     public static SyrupPowderType _syrupPowder;
@@ -15,6 +16,7 @@ public class DrinkController : MonoBehaviour
 
     void Awake()
     {
+        // Zero all parameters
         _tea = TeaTypes.None;
         _topping = ToppingsType.None; 
         _syrupPowder = SyrupPowderType.None;
@@ -25,9 +27,9 @@ public class DrinkController : MonoBehaviour
         
     }
 
+    // Check for what type of ingredient is being sent (if it is a tea topping or syrup)
     public void AddIngredient(object ingredient)
     {
-        // Debug.Log("Received Ingredient: " + ingredient);
         switch (ingredient)
         {
             case TeaTypes tea:
@@ -37,6 +39,8 @@ public class DrinkController : MonoBehaviour
                 _topping = topping;
                 break;
             case SyrupPowderType syrupPowder:
+                // Because the station includes both milk and sugar, and both are being tracked separtely,
+                // we need to check if it is one or the other
                 if(syrupPowder == SyrupPowderType.Milk)
                 {
                     _milk = syrupPowder;
@@ -47,11 +51,12 @@ public class DrinkController : MonoBehaviour
                 }
                 break;
             case bool:
+                // Boolean cases are checked at different functions
                 break;
         }
-        // Debug.Log("Added Ingredient: " + ingredient);
     }
 
+    // Public setters that are accessed by minigame scripts
     public void AddIce()
     {
         _isIceAdded = true;
@@ -67,8 +72,8 @@ public class DrinkController : MonoBehaviour
         _isBlendedUp = true;
     }
 
-    // Function to check if all the procedures are performed on the drink
-    // Given a recipe
+    // For now it is a debug function.
+    // TODO: Use this function to compare the drink made so far with the recipe.
     public void CheckDrink()
     {
         Debug.Log("Drink Controller Tea: " + _tea);
@@ -80,6 +85,7 @@ public class DrinkController : MonoBehaviour
         Debug.Log("Drink Controller Blended: " + _isBlendedUp);
     }
 
+    // Zeroes the entire drink to represent it being thrown away
     public void TrashDrink()
     {
         _tea = TeaTypes.None;

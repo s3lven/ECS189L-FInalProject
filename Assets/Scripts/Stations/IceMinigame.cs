@@ -31,14 +31,14 @@ public class IceMinigame : MonoBehaviour
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
-        iceCount = 0;
     }
 
     void Update()
     {
+        // Completes when the player has put two ice units in the cup
         if (iceCount == 2)
         {
-            Debug.Log("Ice count: " + iceCount);
+            // Debug.Log("Ice count: " + iceCount);
             CheckIce();
         }
     }
@@ -47,7 +47,11 @@ public class IceMinigame : MonoBehaviour
     {
         Debug.Log("Sent Ice");
         drinkController.AddIce();
-        drinkController.CheckDrink();
+        // Debug function
+        // drinkController.CheckDrink();
+        // Play sound here to signify completion
+        // Debug function
+        // drinkController.CheckDrink();
         PressButtonPanelClose();
     }
 

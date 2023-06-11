@@ -35,6 +35,7 @@ public class PourTeaMinigame : MonoBehaviour
     public void PourTea()
     {
         // Debug.Log("Minigame Start!");
+        // Checks which button is pressed and assigns the tea
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         switch (buttonName)
         {
@@ -55,15 +56,19 @@ public class PourTeaMinigame : MonoBehaviour
                 break;
         }   
         // Debug.Log("Wait Start");
+        // Start animation here
         StartCoroutine(WaitButtonPressed());
+        // Assign the drink
         drinkController.AddIngredient(tea);
     }
 
     IEnumerator WaitButtonPressed()
     {
         yield return new WaitForSeconds(5);
-        // Debug.Log("You've waited 5 seconds.");
-        drinkController.CheckDrink();
+        Debug.Log("Tea has been poured");
+        // Play sound here to signify completion
+        // Debug Function
+        // drinkController.CheckDrink();
         PressButtonPanelClose();
     }
 }

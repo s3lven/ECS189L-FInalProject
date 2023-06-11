@@ -31,8 +31,7 @@ public class BlendMinigame : MonoBehaviour
 
     public void BlendDrink()
     {
-        // Debug.Log("Minigame Start!");
-        // Play animation here
+        // Play animation here to blend
         StartCoroutine(WaitButtonPressed());
         drinkController.BlendUp();
     }
@@ -41,7 +40,8 @@ public class BlendMinigame : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         Debug.Log("Drink is blended!");
-        drinkController.CheckDrink();
+        // Play sound here to signify completion
+        // drinkController.CheckDrink();
         PressButtonPanelClose();
     }
 }

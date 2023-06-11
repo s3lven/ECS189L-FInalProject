@@ -5,20 +5,16 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    // [SerializeField] GameObject newIcePrefab;
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0) 
         {
+            // Grab the object and its script (to access public member)
             GameObject dropped = eventData.pointerDrag;
             Topping topping = dropped.GetComponent<Topping>();
 
-            // Place the item into the empty slot
+            // Place the item into the empty slot instead of resetting to original slot
             topping.parentAfterDrag = transform;
-            //Destroy(dropped);
-            // Spawn another item
-            // GameObject childObject = Instantiate(newIcePrefab);
-            // childObject.transform.parent = topping.parentAfterDrag.transform;
 
         }
     }
