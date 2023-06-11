@@ -10,14 +10,13 @@ public class Player_Controller : MonoBehaviour
     Transform avatar;
 
     // Player Movement
-    [SerializeField] public InputAction inputAction;
+    [SerializeField] InputAction inputAction;
     [SerializeField] float movementSpeed;
     Vector2 movementInput;
-    public bool canMove;
 
     // Interaction
-    [SerializeField] public InputAction mouseBinding;
-    [SerializeField] public InputAction interactionBinding;
+    [SerializeField] InputAction mouseBinding;
+    [SerializeField] InputAction interactionBinding;
     [SerializeField] LayerMask interactLayer;
     Vector2 mousePositionInput;
     Camera camera;
@@ -30,7 +29,6 @@ public class Player_Controller : MonoBehaviour
         // Assign the sprite to the player so we can move it
         avatar = transform.GetChild(0);
         camera = Camera.main;
-        canMove = true;
 
     }
 
@@ -46,7 +44,7 @@ public class Player_Controller : MonoBehaviour
     {
         // Assign the scale to move the player
         movementInput = inputAction.ReadValue<Vector2>();
-        if (movementInput.x != 0 && this.canMove)
+        if (movementInput.x != 0)
         {
             avatar.localScale = new Vector2(Mathf.Sign(movementInput.x), 1);
         }
@@ -57,12 +55,8 @@ public class Player_Controller : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(this.canMove)
-        {
-            // Move the player
-            rigidbody.velocity = movementInput * movementSpeed;
-        }
-        
+        // Move the player
+        rigidbody.velocity = movementInput * movementSpeed;
     }
 
     private void OnEnable()
@@ -90,7 +84,7 @@ public class Player_Controller : MonoBehaviour
             {
                 if(hit.transform.tag == "Interactable")
                 {
-                    // Debug.Log("Interacted");
+                    Debug.Log("Interacted");
                     if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
                     {
                         return;
@@ -100,16 +94,6 @@ public class Player_Controller : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void StopPlayer()
-    {
-        this.rigidbody.isKinematic = true;  
-    }
-
-    public void RestartPlayer()
-    {
-        this.rigidbody.isKinematic = false;
     }
 }
 

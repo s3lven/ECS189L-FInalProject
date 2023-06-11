@@ -5,8 +5,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 
-    [SerializeField] GameObject miniGame;
-    GameObject highlight;
+[SerializeField] GameObject miniGame;
+GameObject highlight;
 
     private void OnEnable()
     {
@@ -32,5 +32,17 @@ public class Interactable : MonoBehaviour
     public void PlayMiniGame()
     {
         miniGame.SetActive(true);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
