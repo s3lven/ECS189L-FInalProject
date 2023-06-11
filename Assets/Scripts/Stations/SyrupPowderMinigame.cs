@@ -63,6 +63,6 @@ public class SyrupPowderMinigame : MonoBehaviour
         // Debug.Log("Syrup/Powder poured");
         // Play sound here to signify completion
         // drinkController.CheckDrink();
-        // PressButtonPanelClose();
+        PressButtonPanelClose();
     }
 }
