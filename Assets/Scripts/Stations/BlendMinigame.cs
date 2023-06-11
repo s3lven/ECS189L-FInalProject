@@ -2,13 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceMinigame : MonoBehaviour
+public class BlendMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    [SerializeField] GameObject cupObject;
     private PlayerController playerController;
     private DrinkController drinkController;
-    public int iceCount;
 
     public void PressButtonPanelClose()
     {
@@ -18,7 +16,6 @@ public class IceMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
-
     }
 
     void OnDisable()
@@ -28,27 +25,23 @@ public class IceMinigame : MonoBehaviour
 
     void Awake()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
-        iceCount = 0;
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
-    void Update()
+    public void BlendDrink()
     {
-        if (iceCount == 2)
-        {
-            Debug.Log("Ice count: " + iceCount);
-            CheckIce();
-        }
+        // Debug.Log("Minigame Start!");
+        // Play animation here
+        StartCoroutine(WaitButtonPressed());
+        drinkController.BlendUp();
     }
 
-    void CheckIce()
+    IEnumerator WaitButtonPressed()
     {
-        Debug.Log("Sent Ice");
-        drinkController.AddIce();
+        yield return new WaitForSeconds(5);
+        Debug.Log("Drink is blended!");
         drinkController.CheckDrink();
         PressButtonPanelClose();
     }
-
-
 }

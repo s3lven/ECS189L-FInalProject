@@ -5,13 +5,13 @@ using Boba;
 
 public class DrinkController : MonoBehaviour
 {
-    private static TeaTypes _tea;
-    private static ToppingsType _topping;
-    private static SyrupPowderType _syrupPowder;
-    private static SyrupPowderType _milk;
-    private static bool  _isIceAdded;
-    private static bool _isShakenUp;
-    private static bool _isBlendedUp;
+    public static TeaTypes _tea;
+    public static ToppingsType _topping;
+    public static SyrupPowderType _syrupPowder;
+    public static SyrupPowderType _milk;
+    public static bool  _isIceAdded;
+    public static bool _isShakenUp;
+    public static bool _isBlendedUp;
 
     void Awake()
     {
@@ -75,9 +75,20 @@ public class DrinkController : MonoBehaviour
         Debug.Log("Drink Controller Topping: " + _topping);
         Debug.Log("Drink Controller Syrup Powder: " + _syrupPowder);
         Debug.Log("Drink Controller Milk: " + _milk);
-        // Debug.Log("Drink Controller Ice: " + _isShakenUp);
-        // Debug.Log("Drink Controller Shaked: " + _isShakenUp);
-        // Debug.Log("Drink Controller blended: " + _isBlendedUp);
+        Debug.Log("Drink Controller Ice: " + _isIceAdded);
+        Debug.Log("Drink Controller Shaked: " + _isShakenUp);
+        Debug.Log("Drink Controller Blended: " + _isBlendedUp);
+    }
+
+    public void TrashDrink()
+    {
+        _tea = TeaTypes.None;
+        _topping = ToppingsType.None;
+        _syrupPowder = SyrupPowderType.None;
+        _milk = SyrupPowderType.None;
+        _isIceAdded = false;
+        _isShakenUp = false;
+        _isBlendedUp = false;
     }
 
 }

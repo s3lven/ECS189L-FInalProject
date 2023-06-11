@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    [SerializeField] GameObject newIcePrefab;
+    // [SerializeField] GameObject newIcePrefab;
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0) 
