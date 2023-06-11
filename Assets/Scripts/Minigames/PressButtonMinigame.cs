@@ -7,8 +7,7 @@ using Boba;
 public class PressButtonMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    Player_Controller playerController;
-
+    private Player_Controller playerController;
     private DrinkController drinkController;
     TeaTypes tea;
 

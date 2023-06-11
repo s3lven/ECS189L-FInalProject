@@ -8,6 +8,7 @@ public class DrinkController : MonoBehaviour
     private static TeaTypes _tea;
     private static ToppingsType _topping;
     private static SyrupPowderType _syrupPowder;
+    private static SyrupPowderType _milk;
     private static bool  _isIceAdded;
     private static bool _isShakenUp;
     private static bool _isBlendedUp;
@@ -17,6 +18,7 @@ public class DrinkController : MonoBehaviour
         _tea = TeaTypes.None;
         _topping = ToppingsType.None; 
         _syrupPowder = SyrupPowderType.None;
+        _milk = SyrupPowderType.None;
         _isIceAdded = false;
         _isShakenUp = false;
         _isBlendedUp = false;
@@ -35,7 +37,14 @@ public class DrinkController : MonoBehaviour
                 _topping = topping;
                 break;
             case SyrupPowderType syrupPowder:
-                _syrupPowder = syrupPowder;
+                if(syrupPowder == SyrupPowderType.Milk)
+                {
+                    _milk = syrupPowder;
+                }
+                else if (syrupPowder == SyrupPowderType.Sugar)
+                {
+                    _syrupPowder = syrupPowder;
+                }
                 break;
             case bool:
                 break;
@@ -64,7 +73,8 @@ public class DrinkController : MonoBehaviour
     {
         Debug.Log("Drink Controller Tea: " + _tea);
         Debug.Log("Drink Controller Topping: " + _topping);
-        // Debug.Log("Drink Controller Syrup Powder: " + _syrupPowder);
+        Debug.Log("Drink Controller Syrup Powder: " + _syrupPowder);
+        Debug.Log("Drink Controller Milk: " + _milk);
         // Debug.Log("Drink Controller Ice: " + _isShakenUp);
         // Debug.Log("Drink Controller Shaked: " + _isShakenUp);
         // Debug.Log("Drink Controller blended: " + _isBlendedUp);

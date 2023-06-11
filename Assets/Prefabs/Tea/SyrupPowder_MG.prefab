@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 227.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 361515658867281472, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -87.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1395539157151998167, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -94,10 +118,125 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2425542315353396672, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
       propertyPath: m_Name
-      value: TeaStation_MG
+      value: SyrupPowder_MG
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 2425542315353396672, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 502.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983892445737174302, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -87.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3455541761299035818, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_Name
+      value: Milk_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880407789979541025, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4269190408250952238}
+    - target: {fileID: 3880407789979541025, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SyrupPowderMinigame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029987694839973291, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_Name
+      value: Sugar_Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588550087376282267, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056202844715994525, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4269190408250952238}
+    - target: {fileID: 7056202844715994525, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PourSyrupTea
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056202844715994525, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SyrupPowderMinigame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159457204844675533, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4269190408250952238}
+    - target: {fileID: 9159457204844675533, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PourSyrupTea
+      objectReference: {fileID: 0}
+    - target: {fileID: 9159457204844675533, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SyrupPowderMinigame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5307716586453054820, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 7364005237145852511, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2425542315353396672, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4269190408250952238}
   m_SourcePrefab: {fileID: 100100000, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+--- !u!1 &4894429575601548755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2425542315353396672, guid: fee4f27f19477a74799d84a7de1f69bc, type: 3}
+  m_PrefabInstance: {fileID: 7081277258982504467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4269190408250952238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4894429575601548755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019d7f677628a134eb9ebe6370f66e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePanel: {fileID: 4894429575601548755}
