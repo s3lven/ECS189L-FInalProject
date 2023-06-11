@@ -232,4 +232,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c806702f0aad5ea44a98855055a6d92e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  miniGame: {fileID: 0}
+  miniGame: {fileID: 7132790406581782302, guid: 6140428857226d24694c88598556aa7c, type: 3}

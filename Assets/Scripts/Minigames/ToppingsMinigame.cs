@@ -6,12 +6,12 @@ using Boba;
 public class ToppingsMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    public static PlayerController playerController;
-
     [SerializeField] GameObject cupObject;
+    private PlayerController playerController;
+    private DrinkController drinkController;    
     ToppingsType toppings;
     bool isToppingLoaded;
-    private DrinkController drinkController;
+    
 
     public void PressButtonPanelClose()
     {
@@ -68,6 +68,7 @@ public class ToppingsMinigame : MonoBehaviour
         Debug.Log("Topping sent: " + toppings);
         drinkController.AddIngredient(toppings);
         drinkController.CheckDrink();
+        PressButtonPanelClose();
     }
 
 
