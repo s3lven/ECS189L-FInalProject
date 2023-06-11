@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Boba;
 
-public class PressButtonMinigame : MonoBehaviour
+public class PourTeaMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    private Player_Controller playerController;
+    private PlayerController playerController;
     private DrinkController drinkController;
     TeaTypes tea;
 
@@ -29,7 +29,7 @@ public class PressButtonMinigame : MonoBehaviour
     void Awake()
     {
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     public void PourTea()

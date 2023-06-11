@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Boba;
 
-public class DragDropMinigame : MonoBehaviour
+public class ToppingsMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    public static Player_Controller playerController;
+    public static PlayerController playerController;
 
     [SerializeField] GameObject cupObject;
     ToppingsType toppings;
@@ -31,7 +31,7 @@ public class DragDropMinigame : MonoBehaviour
 
     void Awake()
     {
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
         isToppingLoaded = false;
     }

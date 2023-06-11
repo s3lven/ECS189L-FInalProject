@@ -7,7 +7,7 @@ using Boba;
 public class SyrupPowderMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
-    private Player_Controller playerController;
+    private PlayerController playerController;
     private DrinkController drinkController;
     SyrupPowderType syrupPowder;
 
@@ -29,7 +29,7 @@ public class SyrupPowderMinigame : MonoBehaviour
     void Awake()
     {
         this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
-        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     public void PourSyrupTea()
