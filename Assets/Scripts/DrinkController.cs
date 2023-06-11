@@ -25,7 +25,7 @@ public class DrinkController : MonoBehaviour
 
     public void AddIngredient(object ingredient)
     {
-        Debug.Log("Received Ingredient: " + ingredient);
+        // Debug.Log("Received Ingredient: " + ingredient);
         switch (ingredient)
         {
             case TeaTypes tea:
@@ -40,7 +40,7 @@ public class DrinkController : MonoBehaviour
             case bool:
                 break;
         }
-        Debug.Log("Added Ingredient: " + ingredient);
+        // Debug.Log("Added Ingredient: " + ingredient);
     }
 
     public void AddIce()

@@ -8,13 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77145666142130508, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PourTea
+      objectReference: {fileID: 0}
     - target: {fileID: 312201859588560575, guid: fba560b02444be3428109a630d40dab4, type: 3}
       propertyPath: m_Name
       value: OolongTeaButton
       objectReference: {fileID: 0}
+    - target: {fileID: 312201859588560575, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348689244992380814, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PourTea
+      objectReference: {fileID: 0}
     - target: {fileID: 2859105430769805091, guid: fba560b02444be3428109a630d40dab4, type: 3}
       propertyPath: m_Name
-      value: PressButton_MG Variant
+      value: TeaStation_MG
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859105430769805091, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100720704956127516, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PourTea
       objectReference: {fileID: 0}
     - target: {fileID: 4395644087650695443, guid: fba560b02444be3428109a630d40dab4, type: 3}
       propertyPath: m_Pivot.x
@@ -104,9 +124,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenTeaButton
       objectReference: {fileID: 0}
+    - target: {fileID: 4620731356145805872, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 6288119123190078921, guid: fba560b02444be3428109a630d40dab4, type: 3}
       propertyPath: m_Name
       value: BlackTeaButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6288119123190078921, guid: fba560b02444be3428109a630d40dab4, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

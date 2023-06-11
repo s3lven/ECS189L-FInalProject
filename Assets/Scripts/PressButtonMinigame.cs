@@ -35,9 +35,9 @@ public class PressButtonMinigame : MonoBehaviour
         playerController.interactionBinding.Enable();
     }
 
-    public void PressWaitButton()
+    public void PourTea()
     {
-        Debug.Log("Minigame Start!");
+        // Debug.Log("Minigame Start!");
         string buttonName = EventSystem.current.currentSelectedGameObject.name;
         switch (buttonName)
         {
@@ -57,7 +57,7 @@ public class PressButtonMinigame : MonoBehaviour
                 Debug.Log("Tea not found");
                 break;
         }   
-        Debug.Log("Wait Start");
+        // Debug.Log("Wait Start");
         StartCoroutine(WaitButtonPressed());
         drinkController.AddIngredient(tea);
     }
