@@ -1,25 +1,28 @@
+// Name is misleading, but holds the ingredient that have specific types
 namespace Boba
 {
     public enum TeaTypes
     {
         BlackTea,
         GreenTea,
-        OolongTea
+        OolongTea,
+        None
     }
 
-    public enum Toppings
+    public enum ToppingsType
     {
         Boba,
-        LycheeJelly
+        LycheeJelly,
+        GrassJelly,
+        None
     }
 
-    public enum SyrupPowder
+    public enum SyrupPowderType
     {
         Sugar,
-        Rose,
-        Mango,
-        Taro
+        Milk,
+        None
     }
 
-    
+
 }
