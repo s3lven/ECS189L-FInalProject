@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool canMove;
 
     // Interaction
-    [SerializeField] public InputAction mouseBinding;
-    [SerializeField] public InputAction interactionBinding;
+    [SerializeField] InputAction mouseBinding;
+    [SerializeField] InputAction interactionBinding;
     [SerializeField] LayerMask interactLayer;
     Vector2 mousePositionInput;
     Camera camera;
@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         avatar = transform.GetChild(0);
         // Camera used to raycast on interactables
         camera = Camera.main;
-        canMove = true;
 
     }
 
@@ -48,7 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         // Assign the scale to move the player
         movementInput = inputAction.ReadValue<Vector2>();
-        if (movementInput.x != 0 && this.canMove)
+        if (movementInput.x != 0)
         {
             avatar.localScale = new Vector2(Mathf.Sign(movementInput.x), 1);
         }
@@ -59,12 +58,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(this.canMove)
+        if (this.canMove)
         {
             // Move the player
             rigidbody.velocity = movementInput * movementSpeed;
         }
-        
+
     }
 
     private void OnEnable()
