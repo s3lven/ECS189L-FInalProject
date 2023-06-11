@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Interactable : MonoBehaviour
+public class Submit : MonoBehaviour
 {
-    // Minigame that will start when interacted with
-    [SerializeField] GameObject miniGame;
     // Yellow highlight that surrounds the interactable when the player is near
     GameObject highlight;
 
@@ -18,7 +16,7 @@ public class Interactable : MonoBehaviour
     // When the player's colllider hits the box's, light up
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             highlight.SetActive(true);
         }
@@ -26,7 +24,7 @@ public class Interactable : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             highlight.SetActive(false);
         }
@@ -35,6 +33,8 @@ public class Interactable : MonoBehaviour
     // Called when the user left clicks the interactable. Turns on the minigame panel.
     public void PlayMiniGame()
     {
-        miniGame.SetActive(true);
+        // Grab the recipe
+        // Grab the drink from the DrinkController
+        // Compare to see if they have all the ingredients
     }
 }
