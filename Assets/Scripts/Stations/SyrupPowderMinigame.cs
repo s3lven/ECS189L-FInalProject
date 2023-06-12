@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Boba;
 
+
+
 public class SyrupPowderMinigame : MonoBehaviour
 {
     [SerializeField] GameObject GamePanel;
     private PlayerController playerController;
     private DrinkController drinkController;
     SyrupPowderType syrupPowder;
+    [SerializeField] private AudioSource source;
 
     public void PressButtonPanelClose()
     {
@@ -45,10 +48,14 @@ public class SyrupPowderMinigame : MonoBehaviour
         {
             case "Sugar_Button":
                 Debug.Log("I poured sugar");
+                // Play sound here to signify completion
+                source.Play();
                 syrupPowder = SyrupPowderType.Sugar;
                 break;
             case "Milk_Button":
                 Debug.Log("I poured milk");
+                // Play sound here to signify completion
+                source.Play();
                 syrupPowder = SyrupPowderType.Milk;
                 break;
             default:
@@ -65,7 +72,7 @@ public class SyrupPowderMinigame : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         // Debug.Log("Syrup/Powder poured");
-        // Play sound here to signify completion
+        
         // drinkController.CheckDrink();
         PressButtonPanelClose();
     }

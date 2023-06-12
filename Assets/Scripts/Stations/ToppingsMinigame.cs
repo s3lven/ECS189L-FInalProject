@@ -11,7 +11,7 @@ public class ToppingsMinigame : MonoBehaviour
     private DrinkController drinkController;    
     ToppingsType toppings;
     bool isToppingLoaded;
-    
+    public AudioSource clip;
 
     public void PressButtonPanelClose()
     {
@@ -60,9 +60,11 @@ public class ToppingsMinigame : MonoBehaviour
             case "Boba_Topping":
                 toppings = ToppingsType.Boba;
                 break;
+                clip.Play();
             case "LycheeJelly_Topping":
                 toppings = ToppingsType.LycheeJelly;
                 break;
+                clip.Play();
             default:
                 Debug.Log("There is no topping called " + objectName);
                 break;

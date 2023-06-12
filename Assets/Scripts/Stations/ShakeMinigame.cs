@@ -7,6 +7,7 @@ public class ShakeMinigame : MonoBehaviour
     [SerializeField] GameObject GamePanel;
     private PlayerController playerController;
     private DrinkController drinkController;
+    public AudioSource clip;
 
     public void PressButtonPanelClose()
     {
@@ -37,6 +38,7 @@ public class ShakeMinigame : MonoBehaviour
     {
         // Debug.Log("Minigame Start!");
         // Play animation here
+        clip.Play();
         StartCoroutine(WaitButtonPressed());
         drinkController.ShakeUp();
     }

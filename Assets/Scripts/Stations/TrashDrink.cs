@@ -8,7 +8,7 @@ public class TrashDrink : MonoBehaviour
     [SerializeField] GameObject cupObject;
     private PlayerController playerController;
     private DrinkController drinkController;
-
+    public AudioSource clip;
 
     public void PressButtonPanelClose()
     {
