@@ -32,7 +32,7 @@ public class PourTeaMinigame : MonoBehaviour
 
     void Awake()
     {
-        this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
+        drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 

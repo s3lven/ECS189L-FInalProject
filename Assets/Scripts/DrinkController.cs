@@ -119,7 +119,7 @@ public class DrinkController : MonoBehaviour
             _isIceAddedEncoding +
             _isShakenUpEncoding +
             _isBlendedUpEncoding;
-        // Debug.Log(message);
+        Debug.Log(message);
 
         return message;
     }

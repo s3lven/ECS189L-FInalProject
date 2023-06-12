@@ -6,36 +6,29 @@ using UnityEngine.SceneManagement;
 public class ScoreController : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI scoreText;
-    public int totalOrders;
-    public static int completedOrders;
+    public OrderController orderController;
 
-    // Start is called before the first frame update
-    public void CompleteOrder()
+    void Start()
     {
-        ScoreController.completedOrders += 1;
+        orderController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<OrderController>();
     }
-
     public static void Reset()
     {
-        completedOrders = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Point condition -- use Pub/Sub here?
-        if (Input.GetMouseButtonDown(1))
-        {
-            CompleteOrder();
-        }
+        
 
-        string scoreString = string.Format("{0}/{1}", ScoreController.completedOrders, totalOrders);
+        string scoreString = string.Format("{0}", orderController.score);
         scoreText.text = scoreString;
 
         // Condition to load the end screen
-        if (ScoreController.completedOrders == totalOrders)
-        {
-            SceneManager.LoadScene("End");
-        }
+        // if (ScoreController.completedOrders == totalOrders)
+        // {
+        //     SceneManager.LoadScene("End");
+        // }
     }
 }

@@ -29,7 +29,7 @@ public class TrashDrink : MonoBehaviour
     void Awake()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        this.drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
+        drinkController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<DrinkController>();
     }
 
     // Public function that uses the DrinkController's zero function to reset drink

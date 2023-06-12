@@ -11,6 +11,7 @@ public class OrderController : MonoBehaviour
     public int points = 10;
     public int drinksFailed;
     public int drinksMade;
+    public int score;
 
     public void checkEncoding()
     {
@@ -25,6 +26,7 @@ public class OrderController : MonoBehaviour
             // Zero the DrinkController
             drinkController.TrashDrink();
             drinksMade++;
+            score += points;
         }
         else
         {
@@ -32,6 +34,10 @@ public class OrderController : MonoBehaviour
             drinkController.TrashDrink();
             drinksFailed++;
         }
+
+        Debug.Log("Number of Drinks Made: " + drinksMade);
+        Debug.Log("Number of Drinks Failed: " + drinksFailed);
+        Debug.Log("Score: " + score);
     }
 
     void createOrderEncoding()
@@ -55,7 +61,7 @@ public class OrderController : MonoBehaviour
         // Choose to be shaken. If not shaken, then blend if there's ice
         var randomShake = randomGen.Next(0, 2);
         var randomShakeBool = randomShake != 0;
-        if ((!randomShakeBool) && (randomIce != 0))
+        if ((!randomShakeBool) && (randomIce == 1))
         {
             randomBlended = 1;
         }
@@ -69,6 +75,8 @@ public class OrderController : MonoBehaviour
             randomShake.ToString() +
             randomBlended.ToString();
 
+        // Debug.Log("Ice: " + randomIce.ToString());
+        // Debug.Log("Blended: " + randomBlended.ToString());
         Debug.Log("Order: " + order);
     }
 
@@ -78,5 +86,6 @@ public class OrderController : MonoBehaviour
         Debug.Log("Order Generation ON!");
         drinksFailed = 0;
         drinksMade = 0;
+        score = 0;
     }
 }
