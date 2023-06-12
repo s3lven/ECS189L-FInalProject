@@ -18,6 +18,7 @@ public class Interactable : MonoBehaviour
     // When the player's colllider hits the box's, light up
     private void OnTriggerEnter(Collider other)
     {
+        // Debug.Log("Collide: " + other.gameObject.name);
         if(other.tag == "Player")
         {
             highlight.SetActive(true);

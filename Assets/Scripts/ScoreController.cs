@@ -23,6 +23,7 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Point condition -- use Pub/Sub here?
         if (Input.GetMouseButtonDown(1))
         {
             CompleteOrder();
@@ -31,6 +32,7 @@ public class ScoreController : MonoBehaviour
         string scoreString = string.Format("{0}/{1}", ScoreController.completedOrders, totalOrders);
         scoreText.text = scoreString;
 
+        // Condition to load the end screen
         if (ScoreController.completedOrders == totalOrders)
         {
             SceneManager.LoadScene("End");

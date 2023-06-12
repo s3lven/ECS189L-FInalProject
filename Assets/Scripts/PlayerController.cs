@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     // Components
-    Rigidbody rigidbody;
+    [SerializeField] Rigidbody rigidbody;
     Transform avatar;
 
     // Player Movement -- uses Unity's new Input System
@@ -26,12 +26,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Assign the rigidbody component to get velocity
-        rigidbody = GetComponent<Rigidbody>();
         // Assign the sprite to the player so we can move it
         avatar = transform.GetChild(0);
         // Camera used to raycast on interactables
         camera = Camera.main;
+        canMove = true;
+        movementSpeed = 5;
 
     }
 
@@ -89,9 +89,10 @@ public class PlayerController : MonoBehaviour
             Ray ray = camera.ScreenPointToRay(mousePositionInput);
             if(Physics.Raycast(ray, out hit, interactLayer))
             {
+                // Debug.Log("hit: " + hit.transform.name);
                 if(hit.transform.tag == "Interactable")
                 {
-                    // TBH i forgot what this if block is for.
+                    // Check if the highlight is on in the hierarachy
                     if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
                     {
                         return;
@@ -103,6 +104,12 @@ public class PlayerController : MonoBehaviour
 
                 if(hit.transform.tag == "Submit")
                 {
+                    // Check if the highlight is on in the hierarachy
+                    if (!hit.transform.GetChild(0).gameObject.activeInHierarchy)
+                    {
+                        return;
+                    }
+                    // Grab the interactable that is clicked on and open its panel
                     Submit temp = hit.transform.GetComponent<Submit>();
                     temp.PlayMiniGame();
                 }
