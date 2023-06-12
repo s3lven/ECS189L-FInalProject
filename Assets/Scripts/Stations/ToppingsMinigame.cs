@@ -60,9 +60,6 @@ public class ToppingsMinigame : MonoBehaviour
             case "LycheeJelly_Topping":
                 toppings = ToppingsType.LycheeJelly;
                 break;
-            case "GrassJelly_Topping":
-                toppings = ToppingsType.GrassJelly;
-                break;
             default:
                 Debug.Log("There is no topping called " + objectName);
                 break;

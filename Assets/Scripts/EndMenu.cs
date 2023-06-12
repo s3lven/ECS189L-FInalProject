@@ -14,6 +14,6 @@ public class EndMenu : MonoBehaviour
     public void RestartGame()
     {
         ScoreController.Reset();
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("MainScene");
     }
 }

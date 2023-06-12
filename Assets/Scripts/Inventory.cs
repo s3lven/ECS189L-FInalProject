@@ -13,8 +13,7 @@ namespace Boba
     {
         None,
         Boba,
-        LycheeJelly,
-        GrassJelly
+        LycheeJelly
     }
 
     public enum SyrupPowderType

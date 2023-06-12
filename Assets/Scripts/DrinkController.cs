@@ -14,6 +14,11 @@ public class DrinkController : MonoBehaviour
     public static bool _isShakenUp;
     public static bool _isBlendedUp;
 
+    public static bool _isTeaAdded;
+    public static bool _isToppingAdded;
+    public static bool _isSyrupPowderAdded;
+    public static bool _isMilkAdded;
+
     char[] nameArray;
     void Awake()
     {
