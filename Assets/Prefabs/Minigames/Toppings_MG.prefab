@@ -133,7 +133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4811010621065855038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -403,6 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 2199982697779472208}
+  parentBeforeDrag: {fileID: 0}
   image: {fileID: 4567529482587281113}
 --- !u!1 &3080074840855558941
 GameObject:
@@ -742,6 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 2007197226205761531}
+  parentBeforeDrag: {fileID: 0}
   image: {fileID: 610035179849975097}
 --- !u!1 &7667245566174512885
 GameObject:
@@ -833,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentAfterDrag: {fileID: 1012997318761879016}
+  parentBeforeDrag: {fileID: 0}
   image: {fileID: 551602165702981861}
 --- !u!1 &8667122379293315835
 GameObject:
