@@ -16,6 +16,10 @@ public class BlendMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
+        if (drinkController._isBlendedUp)
+        {
+            PressButtonPanelClose();
+        }
     }
 
     void OnDisable()

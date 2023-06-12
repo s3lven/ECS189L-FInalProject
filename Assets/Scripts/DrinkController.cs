@@ -6,20 +6,19 @@ using Boba;
 public class DrinkController : MonoBehaviour
 {
     // All stats that are tracked within a drink
-    public static TeaTypes _tea;
-    public static ToppingsType _topping;
-    public static SyrupPowderType _syrupPowder;
-    public static SyrupPowderType _milk;
-    public static bool  _isIceAdded;
-    public static bool _isShakenUp;
-    public static bool _isBlendedUp;
+    public TeaTypes _tea;
+    public ToppingsType _topping;
+    public SyrupPowderType _syrupPowder;
+    public SyrupPowderType _milk;
+    public bool  _isIceAdded;
+    public bool _isShakenUp;
+    public bool _isBlendedUp;
 
-    public static bool _isTeaAdded;
-    public static bool _isToppingAdded;
-    public static bool _isSyrupPowderAdded;
-    public static bool _isMilkAdded;
+    public bool _isTeaAdded;
+    public bool _isToppingAdded;
+    public bool _isSyrupPowderAdded;
+    public bool _isMilkAdded;
 
-    char[] nameArray;
     void Awake()
     {
         // Zero all parameters
@@ -30,6 +29,11 @@ public class DrinkController : MonoBehaviour
         _isIceAdded = false;
         _isShakenUp = false;
         _isBlendedUp = false;
+
+        _isTeaAdded = false;
+        _isToppingAdded = false;
+        _isSyrupPowderAdded = false;
+        _isMilkAdded = false;
         
     }
 

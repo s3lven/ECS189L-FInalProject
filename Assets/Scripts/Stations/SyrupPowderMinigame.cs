@@ -19,6 +19,10 @@ public class SyrupPowderMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
+        if (drinkController._isSyrupPowderAdded && drinkController._isMilkAdded)
+        {
+            PressButtonPanelClose();
+        }
     }
 
     void OnDisable()

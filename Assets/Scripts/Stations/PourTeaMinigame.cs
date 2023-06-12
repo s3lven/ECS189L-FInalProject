@@ -19,6 +19,10 @@ public class PourTeaMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
+        if (drinkController._isTeaAdded)
+        {
+            PressButtonPanelClose();
+        }
     }
 
     void OnDisable()

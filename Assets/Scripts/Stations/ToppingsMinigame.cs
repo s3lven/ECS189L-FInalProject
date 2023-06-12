@@ -21,7 +21,10 @@ public class ToppingsMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
-        
+        if (drinkController._isToppingAdded)
+        {
+            PressButtonPanelClose();
+        }
     }
 
     void OnDisable()

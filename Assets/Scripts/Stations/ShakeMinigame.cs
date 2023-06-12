@@ -16,6 +16,10 @@ public class ShakeMinigame : MonoBehaviour
     void OnEnable()
     {
         playerController.StopPlayer();
+        if (drinkController._isShakenUp)
+        {
+            PressButtonPanelClose();
+        }
     }
 
     void OnDisable()

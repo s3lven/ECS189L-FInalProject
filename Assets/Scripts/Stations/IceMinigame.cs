@@ -19,6 +19,10 @@ public class IceMinigame : MonoBehaviour
     {
         playerController.StopPlayer();
         iceCount = 0;
+        if (drinkController._isIceAdded)
+        {
+            PressButtonPanelClose();
+        }
 
     }
 
