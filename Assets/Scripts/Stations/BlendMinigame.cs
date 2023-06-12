@@ -7,6 +7,7 @@ public class BlendMinigame : MonoBehaviour
     [SerializeField] GameObject GamePanel;
     private PlayerController playerController;
     private DrinkController drinkController;
+    public AudioSource clip;
 
     public void PressButtonPanelClose()
     {
@@ -36,6 +37,7 @@ public class BlendMinigame : MonoBehaviour
     public void BlendDrink()
     {
         // Play animation here to blend
+        clip.Play();
         StartCoroutine(WaitButtonPressed());
         drinkController.BlendUp();
     }

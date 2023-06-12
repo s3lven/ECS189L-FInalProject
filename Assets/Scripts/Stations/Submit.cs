@@ -7,6 +7,7 @@ public class Submit : MonoBehaviour
     // Yellow highlight that surrounds the interactable when the player is near
     GameObject highlight;
     OrderController orderController;
+    public AudioSource clip;
 
     // Grabs the highlight object
     private void OnEnable()

@@ -10,6 +10,8 @@ public class PourTeaMinigame : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;
     TeaTypes tea;
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioSource done;
 
     public void PressButtonPanelClose()
     {
@@ -44,14 +46,17 @@ public class PourTeaMinigame : MonoBehaviour
         switch (buttonName)
         {
             case "BlackTea_Button":
+                source.Play();
                 Debug.Log("I poured black tea");
                 tea = TeaTypes.BlackTea;
                 break;
             case "GreenTea_Button":
+                source.Play();
                 Debug.Log("I poured green tea");
                 tea = TeaTypes.GreenTea;
                 break;
             case "OolongTea_Button":
+                source.Play();
                 Debug.Log("I poured oolong tea");
                 tea = TeaTypes.OolongTea;
                 break;
@@ -70,6 +75,7 @@ public class PourTeaMinigame : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         Debug.Log("Tea has been poured");
+        done.Play();
         // Play sound here to signify completion
         // Debug Function
         // drinkController.CheckDrink();

@@ -9,6 +9,7 @@ public class IceMinigame : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;
     public int iceCount;
+    public AudioSource clip;
 
     public void PressButtonPanelClose()
     {
@@ -53,6 +54,7 @@ public class IceMinigame : MonoBehaviour
         drinkController.AddIce();
         // Debug function
         // drinkController.CheckDrink();
+        clip.Play();
         // Play sound here to signify completion
         // Debug function
         // drinkController.CheckDrink();
