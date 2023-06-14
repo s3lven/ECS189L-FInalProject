@@ -9,6 +9,7 @@ public class Topping : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
     [HideInInspector] public Transform parentAfterDrag;
     [HideInInspector] public Transform parentBeforeDrag;
     public Image image;
+    public AudioSource clip;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -30,6 +31,7 @@ public class Topping : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragH
         // Debug.Log("Dragging");
         // Make the item follow the mouse's position as its being dragged
         transform.position = Input.mousePosition;
+        clip.Play();
     }
 
     public void OnEndDrag(PointerEventData eventData)
