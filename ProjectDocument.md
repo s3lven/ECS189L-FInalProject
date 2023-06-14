@@ -105,6 +105,7 @@ We did not think about the game being played on other platforms besides PC. As s
 
 **List your assets including their sources and licenses.**
 BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc
+https://pixabay.com/sound-effects/good-6081/
 **Describe the implementation of your audio system.**
 
 **Document the sound style.** 
