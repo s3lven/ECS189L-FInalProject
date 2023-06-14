@@ -51,7 +51,11 @@ You should replay any **bold text** with your relevant information. Liberally us
 - [Skeuomorphic Ice machine minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/iecMachine.png)
 - [Toppings minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Toppings%20Table.png)
 - [Hands minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Trash%20Hands.png)
-- Gam icon used for press ![Image](https://img.itch.zone/aW1nLzEyNDY3NDgzLnBuZw==/347x500/r7Xvl%2F.png)
+- Game icon, used for press 
+  <img src="https://img.itch.zone/aW1nLzEyNDY3NDgzLnBuZw==/347x500/r7Xvl%2F.png" data-canonical-src="https://img.itch.zone/aW1nLzEyNDY3NDgzLnBuZw==/347x500/r7Xvl%2F.png" width="100" />
+
+
+
 
 2.  Minigames - I contributed to the minigames associated with each 'station'. These minigames reward players for making decisions and make the game more interactive. I helped to design and implement various mechanics through click-based interactions, drag-and-drop mechanics. This contribution aligns with the intermediate scripting tutorials, game feel, and the entry point into scripting in Unity, as we utilized these concepts to create interactive and immersive minigames.
 - [Toppings drag and drop minigame](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Scripts/Stations/ToppingsMinigame.cs)
