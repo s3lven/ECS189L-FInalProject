@@ -10,9 +10,9 @@ public class OrderController : MonoBehaviour
     private string order;
     private string drink;
     public int points = 10;
-    public int drinksFailed;
-    public int drinksMade;
-    public int score;
+    public static int drinksFailed;
+    public static int drinksMade;
+    public static int score;
 
     public TeaTypes orderTea;
     public ToppingsType orderToppings;

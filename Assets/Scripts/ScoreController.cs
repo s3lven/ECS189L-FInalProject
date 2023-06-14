@@ -6,12 +6,6 @@ using UnityEngine.SceneManagement;
 public class ScoreController : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI scoreText;
-    public OrderController orderController;
-
-    void Start()
-    {
-        orderController = GameObject.FindGameObjectWithTag("Script Home").GetComponent<OrderController>();
-    }
     public static void Reset()
     {
         
@@ -22,7 +16,7 @@ public class ScoreController : MonoBehaviour
     {
         
 
-        string scoreString = string.Format("{0}", orderController.score);
+        string scoreString = string.Format("{0}", OrderController.score);
         scoreText.text = scoreString;
 
         // Condition to load the end screen

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePositionInput;
     Camera camera;
 
+    Scene currentScene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,7 @@ public class PlayerController : MonoBehaviour
         camera = Camera.main;
         canMove = true;
         movementSpeed = 5;
-
+        currentScene = SceneManager.GetActiveScene();
     }
 
     private void Awake()
@@ -83,7 +86,7 @@ public class PlayerController : MonoBehaviour
     // Allow the player to interact with objects with the mouse
     void Interact(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if(context.phase == InputActionPhase.Performed && currentScene.name == "MainScene")
         {
             RaycastHit hit;
             Ray ray = camera.ScreenPointToRay(mousePositionInput);
