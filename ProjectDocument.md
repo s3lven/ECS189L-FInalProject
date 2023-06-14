@@ -47,10 +47,11 @@ You should replay any **bold text** with your relevant information. Liberally us
 (Jason Dao:)
 1.  Asset Creation - Throughout development, I took on the role of an asset creator responsible for designing and producing visual assets that contribute to the aesthetic of the game world. This involved creating sprites for characters, objects, and environments. By applying the principles of graphic design and adhering to the visual style guide of the game, my team and I ensured that the assets we created were cohesive, visually appealing, and aligned with the artistic vision of the game. With the retro art style, we wanted to evoke a sense of nostalgia and charm. My work intersects with the course content as I learned the basics of Unity and its graphic capabilities, practiced graphic design, and learned essential Unity concepts that I applied to create visually engaging assets. (all of the artwork for the game is created by our animation and visuals team)
 
-	Here are some examples of assets I created for the game:
+	Here are some examples of assets I created for this project:
 - [Skeuomorphic Ice machine minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/iecMachine.png)
 - [Toppings minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Toppings%20Table.png)
 - [Hands minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Trash%20Hands.png)
+- Gam icon used for press ![Image](https://img.itch.zone/aW1nLzEyNDY3NDgzLnBuZw==/347x500/r7Xvl%2F.png)
 
 2.  Minigames - I contributed to the minigames associated with each 'station'. These minigames reward players for making decisions and make the game more interactive. I helped to design and implement various mechanics through click-based interactions, drag-and-drop mechanics. This contribution aligns with the intermediate scripting tutorials, game feel, and the entry point into scripting in Unity, as we utilized these concepts to create interactive and immersive minigames.
 - [Toppings drag and drop minigame](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Scripts/Stations/ToppingsMinigame.cs)
