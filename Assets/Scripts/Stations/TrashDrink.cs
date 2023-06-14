@@ -9,9 +9,12 @@ public class TrashDrink : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;
     public AudioSource clip;
+    public float delay = 1;
+    float timer;
 
     public void PressButtonPanelClose()
-    {
+    {   
+        
         GamePanel.SetActive(false);
     }
 
@@ -34,12 +37,23 @@ public class TrashDrink : MonoBehaviour
 
     // Public function that uses the DrinkController's zero function to reset drink
     public void ThrowDrinkAway()
-    {
+    {   
         drinkController.TrashDrink();
+        
+        clip.Play();
+        if (timer > delay)
+        {
+            timer += Time.deltaTime;
+            
+            PressButtonPanelClose();
+        }
+        
         // Debug function
         // drinkController.CheckDrink();
         // Play sound here to signify completion
-        PressButtonPanelClose();
+        
         
     }
+    
+    
 }
