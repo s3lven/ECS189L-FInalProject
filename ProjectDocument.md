@@ -47,10 +47,11 @@ You should replay any **bold text** with your relevant information. Liberally us
 (Jason Dao:)
 1.  Asset Creation - Throughout development, I took on the role of an asset creator responsible for designing and producing visual assets that contribute to the aesthetic of the game world. This involved creating sprites for characters, objects, and environments. By applying the principles of graphic design and adhering to the visual style guide of the game, my team and I ensured that the assets we created were cohesive, visually appealing, and aligned with the artistic vision of the game. With the retro art style, we wanted to evoke a sense of nostalgia and charm. My work intersects with the course content as I learned the basics of Unity and its graphic capabilities, practiced graphic design, and learned essential Unity concepts that I applied to create visually engaging assets. (all of the artwork for the game is created by our animation and visuals team)
 
-	Here are some examples of assets I created for the game:
+	Here are some examples of assets I created for this project:
 - [Skeuomorphic Ice machine minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/iecMachine.png)
 - [Toppings minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Toppings%20Table.png)
 - [Hands minigame backdrop](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Trash%20Hands.png)
+- Gam icon used for press ![Image](https://img.itch.zone/aW1nLzEyNDY3NDgzLnBuZw==/347x500/r7Xvl%2F.png)
 
 2.  Minigames - I contributed to the minigames associated with each 'station'. These minigames reward players for making decisions and make the game more interactive. I helped to design and implement various mechanics through click-based interactions, drag-and-drop mechanics. This contribution aligns with the intermediate scripting tutorials, game feel, and the entry point into scripting in Unity, as we utilized these concepts to create interactive and immersive minigames.
 - [Toppings drag and drop minigame](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Scripts/Stations/ToppingsMinigame.cs)
@@ -72,21 +73,25 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 
 
-## Input
+## Input -- Eriz Sartiga
 
-**Describe the default input configuration.**
+While my original role was Game Logic, I have extended myself to Input in the interest of time.
 
-**Add an entry for each platform or input style your project supports.**
+I used Unity's relatively new Input System to assign keybindings. In short, 2d movement is controlled with WASD and players can use the Left-Click on their mouse to interact with objects. The scripts check to see if the player is near the station and the highlight is on before they can interact with the object to mimic realism. Lastly, box colliders are used on the player, the walls, and other game objects to ensure familiarity.
 
-## Game Logic
+## Game Logic - Eriz Sartiga
 
-**Document what game states and game data you managed and what design patterns you used to complete your task.**
+1. Controllers - I wrote Controller scripts that managed the state of different elements in the game, from the current order, to the drink that is currently being made by the player, to the player's movement and interactions. I had hoped to implement more Pub/Sub patterns within the code; however, due to lack of time, I could not refactor the code in time to do so. However, I did ensure that functions that are related to one specific gameplay element are kept on their own script. In short, [OrderController](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/OrderController.cs#LL7C33-L7C33) was in charge of keeping track of what minigames needed to be completed and would check based on string encodings and enumerations. [DrinkController](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/DrinkController.cs#L6)was in charge of keeping track of what is in the current drink and would create the string encoding that will be compared in OrderController.
+
+2. Minigames - I wrote all of the scripts for the minigames. They boiled down to either "click-the-button" or "drag-and-drop" minigames. In short, I added OnClick events to the "click-the-button" games that would update variables in the DrinkController based on the associated station. For the "drag-and-drop" minigames, I used [OnDrag events](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/Stations/Topping/InventorySlot.cs#L16-L30) and Grid Layouts to ensure that items can be dragged from one slot to another. When put in the correct slot, it would eliminate the current prefab and generate a new one in its spawn spot to ensure replayability.
+
+3. Interactable Objects - Although the scripts for these interactable objects could have been better written, I wrote them such that they would hold the UI element and runs the associated minigame. They also use colliders to highlight when the player is near a certain station and is able to interact with that station. 
 
 # Sub-Roles
 
 ## Cross-Platform
 
-**Describe the platforms you targeted for your game release. For each, describe the process and unique actions taken for each platform. What obstacles did you overcome? What was easier than expected?**
+We did not think about the game being played on other platforms besides PC. As such, the only characteristcs for this platform are the use of the mouse and keyboard.
 
 ## Audio - Thomas Chen
 
@@ -96,11 +101,14 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Document the sound style.** 
 
-## Gameplay Testing
+## Gameplay Testing - Eriz Sartiga
 
-**Add a link to the full results of your gameplay tests.**
-
-**Summarize the key findings from your gameplay tests.**
+As someone who has programmed the minigames, I have done extensive gameplay testing to try and account for edge cases in the minigames and overall interactions with the shop. To summarize:
+- The box colliders are programmed such that constantly running into the counter exhibits a weird "glitchy" movement. This is likely due to the player's 3D capsule collider instead of a 2D box collider.
+- There is a glitch on the toppings minigame where if the player quickly clicks on any of the topping without moving their mouse to any other slots (topping slots or cup slots), they accidentally add a topping into the grid layout. Thus, there is two elements in the layout and leads to unintended behavior.
+- There is a weird issue where the drink needs to be blended even though there is no ice in the drink. The scripts are written such that a drink can only be blended if ice is added and the drink is not being shaken. Further testing should be conducted on the OrderController.
+- The gameplay loop works as intended but needs better design to inform players about the process of their drink (i.e. a checklsit showing of what minigames they have done).
+- The music stops at the end of the game with no other sounds playing.
 
 ## Narrative Design
 
