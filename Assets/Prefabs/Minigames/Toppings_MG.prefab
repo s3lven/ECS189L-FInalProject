@@ -655,6 +655,8 @@ GameObject:
   - component: {fileID: 677315225444065065}
   - component: {fileID: 5162080898172215423}
   - component: {fileID: 2438727714787142097}
+  - component: {fileID: 2802619568568644052}
+  - component: {fileID: 1112282248242418182}
   m_Layer: 5
   m_Name: Cup
   m_TagString: Untagged
@@ -758,6 +760,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bobaTopping: {fileID: 1030283849999501386, guid: 167a78997d6890c4cb0930c545831e63, type: 3}
   lycheeJellyTopping: {fileID: 6584356625197601662, guid: b4dd601cfb422f24398df9e755577bf9, type: 3}
+--- !u!114 &2802619568568644052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667122379293315835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c840dc03e5bbd4286dfb2a61870b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 677315225444065065}
+  hoverSprite: {fileID: 21300000, guid: b4ac7c113c6f2db4a8a8427408dee3f1, type: 3}
+  normalSprite: {fileID: 21300000, guid: f200f3c2995bad44b934671df6be086c, type: 3}
+--- !u!114 &1112282248242418182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8667122379293315835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8528600118556674910, guid: c49cebc6e6257ba41829863c2fdc4bed, type: 3}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &8936312141967895397
 GameObject:
   m_ObjectHideFlags: 0
