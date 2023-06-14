@@ -72,21 +72,25 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 
 
-## Input
+## Input -- Eriz Sartiga
 
-**Describe the default input configuration.**
+While my original role was Game Logic, I have extended myself to Input in the interest of time.
 
-**Add an entry for each platform or input style your project supports.**
+I used Unity's relatively new Input System to assign keybindings. In short, 2d movement is controlled with WASD and players can use the Left-Click on their mouse to interact with objects. The scripts check to see if the player is near the station and the highlight is on before they can interact with the object to mimic realism. Lastly, box colliders are used on the player, the walls, and other game objects to ensure familiarity.
 
-## Game Logic
+## Game Logic - Eriz Sartiga
 
-**Document what game states and game data you managed and what design patterns you used to complete your task.**
+1. Controllers - I wrote Controller scripts that managed the state of different elements in the game, from the current order, to the drink that is currently being made by the player, to the player's movement and interactions. I had hoped to implement more Pub/Sub patterns within the code; however, due to lack of time, I could not refactor the code in time to do so. However, I did ensure that functions that are related to one specific gameplay element are kept on their own script. In short, [OrderController](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/OrderController.cs#LL7C33-L7C33) was in charge of keeping track of what minigames needed to be completed and would check based on string encodings and enumerations. [DrinkController](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/DrinkController.cs#L6)was in charge of keeping track of what is in the current drink and would create the string encoding that will be compared in OrderController.
+
+2. Minigames - I wrote all of the scripts for the minigames. They boiled down to either "click-the-button" or "drag-and-drop" minigames. In short, I added OnClick events to the "click-the-button" games that would update variables in the DrinkController based on the associated station. For the "drag-and-drop" minigames, I used [OnDrag events](https://github.com/s3lven/ECS189L-FinalProject/blob/d8b2fa52fa434d0ad33883294dc9f94c57840eb7/Assets/Scripts/Stations/Topping/InventorySlot.cs#L16-L30) and Grid Layouts to ensure that items can be dragged from one slot to another. When put in the correct slot, it would eliminate the current prefab and generate a new one in its spawn spot to ensure replayability.
+
+3. Interactable Objects - Although the scripts for these interactable objects could have been better written, I wrote them such that they would hold the UI element and runs the associated minigame. They also use colliders to highlight when the player is near a certain station and is able to interact with that station. 
 
 # Sub-Roles
 
 ## Cross-Platform
 
-**Describe the platforms you targeted for your game release. For each, describe the process and unique actions taken for each platform. What obstacles did you overcome? What was easier than expected?**
+We did not think about the game being played on other platforms besides PC. As such, the only characteristcs for this platform are the use of the mouse and keyboard.
 
 ## Audio - Thomas Chen
 
@@ -96,11 +100,14 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Document the sound style.** 
 
-## Gameplay Testing
+## Gameplay Testing - Eriz Sartiga
 
-**Add a link to the full results of your gameplay tests.**
-
-**Summarize the key findings from your gameplay tests.**
+As someone who has programmed the minigames, I have done extensive gameplay testing to try and account for edge cases in the minigames and overall interactions with the shop. To summarize:
+- The box colliders are programmed such that constantly running into the counter exhibits a weird "glitchy" movement. This is likely due to the player's 3D capsule collider instead of a 2D box collider.
+- There is a glitch on the toppings minigame where if the player quickly clicks on any of the topping without moving their mouse to any other slots (topping slots or cup slots), they accidentally add a topping into the grid layout. Thus, there is two elements in the layout and leads to unintended behavior.
+- There is a weird issue where the drink needs to be blended even though there is no ice in the drink. The scripts are written such that a drink can only be blended if ice is added and the drink is not being shaken. Further testing should be conducted on the OrderController.
+- The gameplay loop works as intended but needs better design to inform players about the process of their drink (i.e. a checklsit showing of what minigames they have done).
+- The music stops at the end of the game with no other sounds playing.
 
 ## Narrative Design
 
