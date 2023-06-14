@@ -24,12 +24,12 @@ public class ChecklistController : MonoBehaviour
     void setDrinkName()
     {
         // Check the order,
-        // List whatever tea it is {Earl Grey/Jasmine/Oolong}
+        // List whatever tea it is {Black/Jasmine/Oolong}
         string teaName = "";
         switch (orderController.orderTea)
         {
             case TeaTypes.BlackTea:
-                teaName = "Earl Grey";
+                teaName = "Black";
                 break;
             case TeaTypes.GreenTea:
                 teaName = "Jasmine";
@@ -61,16 +61,16 @@ public class ChecklistController : MonoBehaviour
 
         }
         // List if there's any sugar and/or milk
-        string sugarName = (orderController.orderSugar != SyrupPowderType.None) ? "Sugar" : "No Sugar";
-        string milkName = (orderController.orderMilk == SyrupPowderType.None) ? "" : "Milk";
+        string sugarName = (orderController.orderSugar != SyrupPowderType.None) ? "Sugar," : "";
+        string milkName = (orderController.orderMilk == SyrupPowderType.None) ? "" : "with Milk,";
         // List if there's ice in there
-        string iceName = orderController.orderIce ? "Iced" : "No Ice";
+        string iceName = orderController.orderIce ? "Iced," : "";
         // List if it is blended or shaken
         string blendShakeName = orderController.orderShaked ? "Shaken" : "Blended";
         // Example: Jasmine Milk Tea with Sugar, Boba, No Ice, and Shaken
         // Example: Oolong Tea with No Sugar, Lychee Jelly, Iced, and Blended
 
-        string drinkName = string.Format("{0} {1} Tea with {2}, {3} {4}, and {5}",
+        string drinkName = string.Format("{0} Tea\n{1}\n{2}\n{3}\n{4}\n{5}",
             teaName, milkName, sugarName, toppingName, iceName, blendShakeName);
         drinkNameText.text = drinkName;
     }
