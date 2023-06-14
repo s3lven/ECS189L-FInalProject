@@ -49,13 +49,11 @@ public class SyrupPowderMinigame : MonoBehaviour
             case "Sugar_Button":
                 Debug.Log("I poured sugar");
                 // Play sound here to signify completion
-                source.Play();
                 syrupPowder = SyrupPowderType.Sugar;
                 break;
             case "Milk_Button":
                 Debug.Log("I poured milk");
                 // Play sound here to signify completion
-                source.Play();
                 syrupPowder = SyrupPowderType.Milk;
                 break;
             default:
@@ -63,9 +61,14 @@ public class SyrupPowderMinigame : MonoBehaviour
                 break;
         }
         // Debug.Log("Wait Start");
-        StartCoroutine(WaitButtonPressed());
         // Add the ingredient in the controller
-        drinkController.AddIngredient(syrupPowder);
+        if(!drinkController._isSyrupPowderAdded)
+        {
+            source.Play();
+            drinkController.AddIngredient(syrupPowder);
+        }
+        StartCoroutine(WaitButtonPressed());
+        
     }
 
     IEnumerator WaitButtonPressed()

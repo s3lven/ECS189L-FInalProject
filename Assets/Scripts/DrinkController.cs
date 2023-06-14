@@ -44,9 +44,11 @@ public class DrinkController : MonoBehaviour
         {
             case TeaTypes tea:
                 _tea = tea;
+                _isTeaAdded = true;
                 break;
             case ToppingsType topping:
                 _topping = topping;
+                _isToppingAdded = true;
                 break;
             case SyrupPowderType syrupPowder:
                 // Because the station includes both milk and sugar, and both are being tracked separtely,
@@ -54,11 +56,14 @@ public class DrinkController : MonoBehaviour
                 if(syrupPowder == SyrupPowderType.Milk)
                 {
                     _milk = syrupPowder;
+                    _isMilkAdded = true;
                 }
                 else if (syrupPowder == SyrupPowderType.Sugar)
                 {
                     _syrupPowder = syrupPowder;
+                    _isSyrupPowderAdded = true;
                 }
+                
                 break;
             case bool:
                 // Boolean cases are checked at different functions
@@ -104,6 +109,10 @@ public class DrinkController : MonoBehaviour
         _isIceAdded = false;
         _isShakenUp = false;
         _isBlendedUp = false;
+        _isToppingAdded = false;
+        _isMilkAdded = false;
+        _isTeaAdded = false;
+        _isSyrupPowderAdded = false;
     }
 
     public string EncodeDrink()

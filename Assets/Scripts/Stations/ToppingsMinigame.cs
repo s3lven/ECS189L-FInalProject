@@ -10,7 +10,7 @@ public class ToppingsMinigame : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;    
     ToppingsType toppings;
-    bool isToppingLoaded;
+    public bool isToppingLoaded;
     public AudioSource clip;
 
     public void PressButtonPanelClose()
@@ -43,9 +43,10 @@ public class ToppingsMinigame : MonoBehaviour
     {
         // Stop the game from re-running if the topping is already loaded in the drink
         // TODO: the "don't insert any more ingredients because they've already added it" needs to be consistent with all ingredients
-        if(cupObject.transform.childCount > 0 && !isToppingLoaded)
+        if(isToppingLoaded)
         {
            CheckTopping();
+           
         }
     }
 
@@ -70,12 +71,15 @@ public class ToppingsMinigame : MonoBehaviour
                 break;
         }
 
+        Destroy(cupObject.transform.GetChild(0).gameObject);
+
         Debug.Log("Topping sent: " + toppings);
         // Assign the topping in the controller
         drinkController.AddIngredient(toppings);
         // Play sound here to signify completion
         // Debug function 
         // drinkController.CheckDrink();
+        isToppingLoaded = false;
         PressButtonPanelClose();
     }
 

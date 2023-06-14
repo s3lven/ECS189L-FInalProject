@@ -16,7 +16,7 @@ public class IceSlot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         // If the slot its dropped on has no items in it
-        if (transform.childCount == 0)
+        if (transform.childCount == 0 && transform.name == "Ice_Cup")
         {
             // Grab the script and object of the dropped item
             GameObject dropped = eventData.pointerDrag;

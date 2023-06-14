@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Boba;
 
 public class OrderController : MonoBehaviour
 {
@@ -12,6 +13,14 @@ public class OrderController : MonoBehaviour
     public int drinksFailed;
     public int drinksMade;
     public int score;
+
+    public TeaTypes orderTea;
+    public ToppingsType orderToppings;
+    public SyrupPowderType orderSugar;
+    public SyrupPowderType orderMilk;
+    public bool orderIce;
+    public bool orderShaked;
+    public bool orderBlended;
 
     public void checkEncoding()
     {
@@ -33,6 +42,8 @@ public class OrderController : MonoBehaviour
             Debug.Log("Failed!");
             drinkController.TrashDrink();
             drinksFailed++;
+            score -= points;
+            createOrderEncoding();
         }
 
         Debug.Log("Number of Drinks Made: " + drinksMade);
@@ -50,21 +61,37 @@ public class OrderController : MonoBehaviour
 
         // Choose one of the TeaTypes
         var randomTea = randomGen.Next(1, 4);
+        orderTea = (TeaTypes)randomTea;
         // Choose one of the ToppingTypes
         var randomTopping = randomGen.Next(0, 3);
+        orderToppings = (ToppingsType)randomTopping;
         // Choose to add sugar
         var randomSyrupPowder = randomGen.Next(0, 2);
+        orderSugar = (SyrupPowderType)randomSyrupPowder;
         // Choose to add ice
         var randomMilk = randomGen.Next(0, 2);
+        orderMilk = (SyrupPowderType)milkRandomValues[randomMilk];
         // Choose to add ice
         var randomIce = randomGen.Next(0, 2);
+        orderIce = randomIce != 0;
         // Choose to be shaken. If not shaken, then blend if there's ice
         var randomShake = randomGen.Next(0, 2);
+        // True = 1, False = 0
         var randomShakeBool = randomShake != 0;
+        orderShaked = randomShakeBool;
+        // If randomShake is 0 and we have ice, we can blend
         if ((!randomShakeBool) && (randomIce == 1))
         {
             randomBlended = 1;
         }
+        else
+        {
+            randomBlended = 0;
+        }
+
+        orderBlended = randomBlended != 0;
+
+        Debug.Log("orderTea: " + orderTea);
 
         order = 
             randomTea.ToString() +

@@ -46,29 +46,32 @@ public class PourTeaMinigame : MonoBehaviour
         switch (buttonName)
         {
             case "BlackTea_Button":
-                source.Play();
-                Debug.Log("I poured black tea");
+                // Debug.Log("I poured black tea");
                 tea = TeaTypes.BlackTea;
                 break;
             case "GreenTea_Button":
-                source.Play();
-                Debug.Log("I poured green tea");
+                // Debug.Log("I poured green tea");
                 tea = TeaTypes.GreenTea;
                 break;
             case "OolongTea_Button":
-                source.Play();
-                Debug.Log("I poured oolong tea");
+                // Debug.Log("I poured oolong tea");
                 tea = TeaTypes.OolongTea;
                 break;
             default:
                 Debug.Log("Tea not found");
                 break;
-        }   
+        }
         // Debug.Log("Wait Start");
         // Start animation here
-        StartCoroutine(WaitButtonPressed());
         // Assign the drink
-        drinkController.AddIngredient(tea);
+        if (!drinkController._isTeaAdded)
+        {
+            source.Play();
+
+            drinkController.AddIngredient(tea);
+        }
+        StartCoroutine(WaitButtonPressed());
+        
     }
 
     IEnumerator WaitButtonPressed()
