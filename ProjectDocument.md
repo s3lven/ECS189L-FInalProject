@@ -2,6 +2,7 @@
 # Game Basic Information #
 
 ## Summary ##
+![image](https://github.com/s3lven/ECS189L-FinalProject/assets/57575778/b8b7de1f-9b05-4f7e-a7ed-e5397cf08196)
 
 In "Papa's Bobaria," you step into the role of a skilled boba shop barista, tasked with creating delicious and customized drinks for a bustling crowd of customers. As the game begins, you find yourself in the heart of the kitchen, surrounded by various stations and equipment necessary to fulfill orders. Orders will appear at the top of the screen, presenting a combination of random ingredients, flavors, and toppings. You must swiftly navigate the kitchen, visiting stations such as the Topping Station, Powder/Syrups Station, and more.
 
