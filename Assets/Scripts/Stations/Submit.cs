@@ -43,6 +43,7 @@ public class Submit : MonoBehaviour
         // Grab the recipe
         // Grab the drink from the DrinkController
         // Compare to see if they have all the ingredients
+        clip.Play();
         orderController.checkEncoding();
     }
 }
