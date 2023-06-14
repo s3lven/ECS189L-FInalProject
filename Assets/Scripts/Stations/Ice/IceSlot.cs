@@ -15,6 +15,7 @@ public class IceSlot : MonoBehaviour, IDropHandler
     }
     public void OnDrop(PointerEventData eventData)
     {
+        // Debug.Log("Dropped" + eventData.pointer);
         // If the slot its dropped on has no items in it
         if (transform.childCount == 0 && transform.name == "Ice_Cup")
         {
