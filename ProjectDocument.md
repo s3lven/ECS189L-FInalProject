@@ -40,7 +40,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 
-## Animation and Visuals - Jason Dao & ...
+## Animation and Visuals - Jason Dao & Kwantip
 
 **Describe how your work intersects with game feel, graphic design, and world-building. Include your visual style guide if one exists.**
 
@@ -70,7 +70,11 @@ You should replay any **bold text** with your relevant information. Liberally us
 - [Ice cube sprite for UI](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/dropIce.png)
 
 -----------------------------------------------
-
+(Kwantip Tachasooksaree:)
+Even though my role was originally input, I ended up helping out with sprite creations. My main contribution is creating the sprites for the map including the player, interactable objects, and the map itself. I also worked closely with Jason to create some of the minigame UI. For instance, the sugar and milk station and blender station. I attempted to animate the blender minigame where when the player first click the blender, a static image of the blender will appear. When player click the fan button at the bottom to blend, the blender sprite is supposed to alternate between the animated blender sprites that I made. However, I was not able to figure out how to get the animation to fully function. The following are some of the examples of things I made:
+- [Map](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Map.png)
+- [Sugar and milk station] (https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Sugar%20and%20Milk%20Station.png)
+- [Player](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Player.png)
 ...
 
 
