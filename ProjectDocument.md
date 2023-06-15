@@ -53,8 +53,8 @@ secondly improve overall user satisfaction and signify the engagement of the use
 During my reasech of User interface and User Experience I found a game call [Boba Story](https://www.bubbleteagame.com/boba-story), and I use it as a reference for the UI/UX for our game. 
 Here are some assets I used to make our UI in the Mini-game easy to used and user friendly. 
 
--[Button](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/Game%20GUI%20Vol1) from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/game-gui-buttons-96277)
--[Background](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/UI%20pack) also from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-1706500
+- [Button](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/Game%20GUI%20Vol1) from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/game-gui-buttons-96277)
+- [Background](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/UI%20pack) also from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-1706500)
 
 
 
