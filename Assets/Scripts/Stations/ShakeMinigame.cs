@@ -8,6 +8,9 @@ public class ShakeMinigame : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;
     public AudioSource clip;
+    public AudioSource success;
+    public float delay = 1;
+    float timer;
 
     public void PressButtonPanelClose()
     {
@@ -49,6 +52,13 @@ public class ShakeMinigame : MonoBehaviour
         // Play sound here to signify completion
         Debug.Log("Drink is shaked!!");
         // drinkController.CheckDrink();
-        PressButtonPanelClose();
+        success.Play();
+        if (timer > delay)
+        {
+            timer += Time.deltaTime;
+            
+            PressButtonPanelClose();
+        }
+        //PressButtonPanelClose();
     }
 }

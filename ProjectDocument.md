@@ -35,7 +35,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe the steps you took in your role as producer. Typical items include group scheduling mechanism, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, depedency/task tracking, Gantt charts, etc.), and repository management methodology.**
 
-## User Interface
+## User Interface- Thomas Chen & ...
 
 **Describe your user interface and how it relates to gameplay. This can be done via the template.**
 
@@ -108,6 +108,8 @@ We did not think about the game being played on other platforms besides PC. As s
 
 **List your assets including their sources and licenses.**
 BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc
+https://pixabay.com/sound-effects/good-6081/
+https://pixabay.com/sound-effects/success-bell-6776/
 **Describe the implementation of your audio system.**
 
 **Document the sound style.** 
