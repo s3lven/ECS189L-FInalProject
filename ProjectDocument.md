@@ -35,7 +35,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe the steps you took in your role as producer. Typical items include group scheduling mechanism, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, depedency/task tracking, Gantt charts, etc.), and repository management methodology.**
 
-## User Interface- Thomas Chen & Rongshan Gao
+## User Interface - Thomas Chen & Rongshan Gao
 
 (Rongshan Gao)
 1. Title screen - I built a simplistic, yet welcoming title screen for Papa's Bobaria using Unity's Canvas, Panels, Buttons, and TextMeshPro boxes. Using EventSystem to detect user mouse clicks, I implemented buttons to Play, view Controls, and Quit the game. I installed custom fonts and added some clipart for the title screen to provide a more lighthearted feel for players. The Play button loads the main game scene. The Controls button makes an initially invisible panel viewable, which provides the essential mechanics for Papa's Bobaria. Within the Controls panel is a Got It button, which hides the panel again and takes the user back to the Title screen. The Quit button exits the application.
@@ -47,7 +47,9 @@ These screens, while not directly affecting gameplay, provide the player with lo
 (Thomas Chen)
    	
 
-## Movement/Physics
+## Movement/Physics - Eriz Sartiga & Rongshan Gao
+(Eriz Sartiga, Rongshan Gao)
+The movement of this game is simple; the player moves using WASD in a 2D top-down plane. The physics in Papa's Bobaria is also straightforward - the player collides with stations and walls, and cannot move through them. 
 
 **Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
 
