@@ -47,8 +47,16 @@ You should replay any **bold text** with your relevant information. Liberally us
 These screens, while not directly affecting gameplay, provide the player with logical, seamless transitions between game states. In addition, they help set the tone/game feel with the fun fonts and art. Personally, I strongly dislike playing games with overly complicated UI; instead, I really admired the easy-to-digest UI from games like Overcooked and PlateUp. Thus, I attempted to make these screens as simplistic as possible to reduce screen clutter and information overload. This principle also extends to the Controls screen. Despite the short lengths of each screen's scripts, most of the work was done in Unity editor, consisting of working with Canvas, Panels, etc. Since we didn't heavily focus on these aspects during this course, designing and implementing these screens was a fun learning challenge.
 
 (Thomas Chen)
-Since Rongshan has made most of the UI, I mainly focusing on improving the User Experience instead of creating the User Interface.
-Here are some assets I used to make our UI in the Mini-game easy to use and 
+
+Since Rongshan has made most of the UI, I mainly focusing on improving the User Experience instead of creating the User Interface. I had a few goals on the UX improvement. First of all Enhance usability by reducing complexity and cognitive load for users.
+secondly improve overall user satisfaction and signify the engagement of the user and the game. Lastly, increase the efficiency and effectiveness of user interactions.
+During my reasech of User interface and User Experience I found a game call [Boba Story](https://www.bubbleteagame.com/boba-story), and I use it as a reference for the UI/UX for our game. 
+Here are some assets I used to make our UI in the Mini-game easy to used and user friendly. 
+
+-[Button](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/Game%20GUI%20Vol1) from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/game-gui-buttons-96277)
+-[Background](https://github.com/s3lven/ECS189L-FinalProject/tree/9a2bce0d178d984768cbfe5cbd2d538b96784e4b/Assets/UI%20pack) also from [Unity Asset Store](https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-1706500
+
+
 
 ## Movement/Physics - Eriz Sartiga & Rongshan Gao
 (Eriz Sartiga, Rongshan Gao)
