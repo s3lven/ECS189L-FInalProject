@@ -1,6 +1,8 @@
 
 # Game Basic Information #
 
+![Logo](https://github.com/s3lven/ECS189L-FinalProject/assets/119898671/d576c0a8-5f89-4b58-9d8b-480b3e7feb82)
+
 ## Summary ##
 ![image](https://github.com/s3lven/ECS189L-FinalProject/assets/57575778/b8b7de1f-9b05-4f7e-a7ed-e5397cf08196)
 
@@ -117,11 +119,16 @@ We did not think about the game being played on other platforms besides PC. As s
 
 **List your assets including their sources and licenses.**
 BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc
+
 https://pixabay.com/sound-effects/good-6081/
+
 https://pixabay.com/sound-effects/success-bell-6776/
-https://audio-joiner.com/
+
+The tool I use to edit the audio to what we wanted to be: https://audio-joiner.com/
+
 **Describe the implementation of your audio system.**
 
+All the audio is done 
 **Document the sound style.** 
 
 ## Gameplay Testing - Eriz Sartiga
