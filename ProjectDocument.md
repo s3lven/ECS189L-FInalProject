@@ -149,9 +149,11 @@ The tool I use to edit the audio to what we wanted to be [audio joiner](https://
 
 All the audio is done through audio source and script here is an example of the script I added to the game to indicates the action that player done. 
 
-Sound Serializion: https://github.com/s3lven/ECS189L-FinalProject/blob/df59d9b6c759c2998c93dbd4fb640478df24c9d1/Assets/Scripts/Stations/Topping/Topping.cs#L12
+Sound Serializion: 
+https://github.com/s3lven/ECS189L-FinalProject/blob/df59d9b6c759c2998c93dbd4fb640478df24c9d1/Assets/Scripts/Stations/Topping/Topping.cs#L12
 
-Sound in use: https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24
+Sound in use: 
+https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24
 
 **Document the sound style.** 
 
