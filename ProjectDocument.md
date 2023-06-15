@@ -126,19 +126,32 @@ We did not think about the game being played on other platforms besides PC. As s
 
 **List your assets including their sources and licenses.**
 
-BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc
+BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc - Free to Use
+
+[Licenses](https://pixabay.com/service/terms/)
 
 [Success indication 1](https://pixabay.com/sound-effects/good-6081/)
 
 [Success indication 2](https://pixabay.com/sound-effects/success-bell-6776/)
 
+[Ice Dropping Sound Effect](https://pixabay.com/sound-effects/dropping-ice-into-glass-then-pouring-water-79384/)
+
+[Blender Sound Effect](https://pixabay.com/sound-effects/blender-mixer-smoothie-33026/)
+
+[Shaking Sound Effect](https://pixabay.com/sound-effects/martini-shake-pour-34765/)
+
+[Trash Can Sound Effect](https://pixabay.com/sound-effects/trash-can-falling-41919/)
 
 
 The tool I use to edit the audio to what we wanted to be [audio joiner](https://audio-joiner.com/)
 
 **Describe the implementation of your audio system.**
 
-All the audio is done through audio source and script here is an example of the script I added to the game to indicates [success](https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24)
+All the audio is done through audio source and script here is an example of the script I added to the game to indicates the action that player done. 
+
+Sound Serializion: https://github.com/s3lven/ECS189L-FinalProject/blob/df59d9b6c759c2998c93dbd4fb640478df24c9d1/Assets/Scripts/Stations/Topping/Topping.cs#L12
+
+Sound in use: https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24
 
 **Document the sound style.** 
 
