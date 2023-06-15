@@ -126,7 +126,7 @@ The tool I use to edit the audio to what we wanted to be: https://audio-joiner.c
 
 **Describe the implementation of your audio system.**
 
-All the audio is done 
+All the audio is done through audio source 
 **Document the sound style.** 
 
 ## Gameplay Testing - Eriz Sartiga
@@ -137,8 +137,9 @@ As someone who has programmed the minigames, I have done extensive gameplay test
 - The gameplay loop works as intended but needs better design to inform players about the process of their drink (i.e. a checklsit showing of what minigames they have done).
 - The music stops at the end of the game with no other sounds playing.
 
-## Narrative Design
+## Narrative Design - Thomas Chen
 
+The main narrative for our game is trying to immerse the player into the role of a skilled boba shop barista. While the game may not have a traditional story with a linear plot, but we still try to establishes a narrative context and progression through the gameplay elements. The visual assets in the game contribute to the narrative by creating an immersive environment. The vibrant and colorful graphics of the boba shop, kitchen, and various stations help set the atmosphere and establish the setting. There is something to be noted that a lot of our game assets are made by ourselves because during the assets finding stage, we found out there aren't a lot of assets that is related to the theme of us, the boba shop, so we try our best to make the assets we wanted such as the [Sugar and milk station](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Sugar%20and%20Milk%20Station.png), [the variety of tea](https://github.com/s3lven/ECS189L-FinalProject/blob/6927d304afe6a8aa64f643214fb7a0caeed980a7/Assets/Sprites/UI/Black%20Tea.png) and [the animation of the Blender](https://github.com/s3lven/ECS189L-FinalProject/blob/6927d304afe6a8aa64f643214fb7a0caeed980a7/Assets/Sprites/Stage/Blender%20Animated%201.png). As progression in the game, whether through increasing difficulty of the order, all the ingredients or stations, or earning rewards, also contributes to the narrative by reflecting your growth and success as a boba master. It gives a sense of accomplishment and reinforces the idea of becoming the ultimate boba expert.
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
 ## Press Kit and Trailer - Jason Dao & Thomas Chen
