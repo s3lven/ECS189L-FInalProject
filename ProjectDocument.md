@@ -32,9 +32,17 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe the steps you took in your role as producer. Typical items include group scheduling mechanism, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, depedency/task tracking, Gantt charts, etc.), and repository management methodology.**
 
-## User Interface- Thomas Chen & ...
+## User Interface- Thomas Chen & Rongshan Gao
 
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
+(Rongshan Gao)
+1. Title screen - I built a simplistic, yet welcoming title screen for Papa's Bobaria using Unity's Canvas, Panels, Buttons, and TextMeshPro boxes. Using EventSystem to detect user mouse clicks, I implemented buttons to Play, view Controls, and Quit the game. I installed custom fonts and added some clipart for the title screen to provide a more lighthearted feel for players. The Play button loads the main game scene. The Controls button makes an initially invisible panel viewable, which provides the essential mechanics for Papa's Bobaria. Within the Controls panel is a Got It button, which hides the panel again and takes the user back to the Title screen. The Quit button exits the application.
+2. Pause screen - Within the main game, users can pause the game at any time by pressing ESCAPE, chosen due to its common use for this function. Upon making the Pause panel visible, TimeScale is set to 0 to stop the game script. The Resume button hides the panel and reverts TimeScale back to 1. The Restart button resets the main game scene, resetting all progress and allowing the player to make a fresh start. The Home button unloads the main game scene and loads the Title screen. All buttons and fonts used here are similar to ones used in the Title screen.
+3. End screen - After the game ends, the user is taken to the End screen, which provides a summary of the player's stats (orders delivered, orders failed, and total score). In the End screen, the user can either Replay, which loads the game scene again, or go Home, taking the player back to Title screen.
+
+These screens, while not directly affecting gameplay, provide the player with logical, seamless transitions between game states. In addition, they help set the tone/game feel with the fun fonts and art. Personally, I strongly dislike playing games with overly complicated UI; instead, I really admired the easy-to-digest UI from games like Overcooked and PlateUp. Thus, I attempted to make these screens as simplistic as possible to reduce screen clutter and information overload. This principle also extends to the Controls screen. 
+
+(Thomas Chen)
+   	
 
 ## Movement/Physics
 
