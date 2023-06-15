@@ -1,8 +1,6 @@
 
 # Game Basic Information #
 
-![Logo](https://github.com/s3lven/ECS189L-FinalProject/assets/119898671/d576c0a8-5f89-4b58-9d8b-480b3e7feb82)
-
 ## Summary ##
 ![image](https://github.com/s3lven/ECS189L-FinalProject/assets/57575778/b8b7de1f-9b05-4f7e-a7ed-e5397cf08196)
 
