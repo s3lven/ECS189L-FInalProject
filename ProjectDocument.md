@@ -10,14 +10,18 @@ With a 2-D top-down view, you move your character strategically, grabbing ingred
 
 ## Gameplay Explanation ##
 
-**In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
-
 After clicking the play button, players are immediately put into the game stage. Players have a set amount of time to fulfill orders one by one. Around the player are the stations that will help them gather the ingredients. There 8 stations are:
 - Tea Station: When interacting with this station, a panel of three buttons appear. From left to right, these buttons correspond to the black tea, the green tea, and the oolong tea. After pressing the button, the player will need to wait until the window disappears before moving on.
-- Syrup and Milk station: Upon interaction, an image of a machine is brought up with two buttons: 
+- Syrup and Milk station: Upon interaction, an image of a machine is brought up with two buttons: the sugar and milk button. Players will have to visit the station on two separate interactions to get both sugar and milk.
+- Toppings station: Upon interaction, the players must drag the image of either the boba topping or the lychee jelly topping onto the cup.
+- Ice staton: Similar to the toppings station, the players must drag one of the ice sprites into the cup. The player must add two ice sprites before passing.
+- Blend/Shake stations: These two stations require the player to press a button that will play a sound of either shaking or blending the drink. An audio cue will signal when its passed.
+- Trash station: Similar to the other drag and drop games, the player will have to drag the shaker sprite onto the trash sprite. The players will only use this if they need to restart on their drink.
+- Submit station: When finished with a drink, players will interact with this object to turn in their drink. If it is passed, the players will receive 10 points, else minus 10 points. In either case, a new drink will spawn and the player's current drink will be cleared.
 
-**If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
+The players are able to perform tasks at any order. If one of the games have already been interacted with, however, then the player will be locked out from the game and they will be forced to trash their drink.
 
+At the end of the timer, the player will be brought to the end screen, where their stats will of how many successful and failed drinks and score are displayed.
 # Main Roles #
 
 Your goal is to relate the work of your role and sub-role in terms of the content of the course. Please look at the role sections below for specific instructions for each role.
@@ -88,7 +92,7 @@ Even though my role was originally input, I ended up helping out with sprite cre
 
 While my original role was Game Logic, I have extended myself to Input in the interest of time.
 
-I used Unity's relatively new Input System to assign keybindings. In short, 2d movement is controlled with WASD and players can use the Left-Click on their mouse to interact with objects. The scripts check to see if the player is near the station and the highlight is on before they can interact with the object to mimic realism. Lastly, box colliders are used on the player, the walls, and other game objects to ensure familiarity.
+I used Unity's relatively new Input System to assign keybindings. In short, 2d movement is controlled with WASD and players can use the Left-Click on their mouse to interact with objects. The scripts check to see if the player is near the station and the highlight is on before they can interact with the object to mimic realism. Lastly, box colliders are used on the player, the walls, and other game objects to ensure familiarity and game feel.
 
 ## Game Logic - Eriz Sartiga
 
