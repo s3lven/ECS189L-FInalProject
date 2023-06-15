@@ -125,18 +125,24 @@ We did not think about the game being played on other platforms besides PC. As s
 ## Audio - Thomas Chen
 
 **List your assets including their sources and licenses.**
+
 BackGround Music: https://www.youtube.com/watch?v=Uj93hicGDNc
 
-https://pixabay.com/sound-effects/good-6081/
+[Success indication 1](https://pixabay.com/sound-effects/good-6081/)
 
-https://pixabay.com/sound-effects/success-bell-6776/
+[Success indication 2](https://pixabay.com/sound-effects/success-bell-6776/)
 
-The tool I use to edit the audio to what we wanted to be: https://audio-joiner.com/
+
+
+The tool I use to edit the audio to what we wanted to be [audio joiner](https://audio-joiner.com/)
 
 **Describe the implementation of your audio system.**
 
-All the audio is done through audio source 
+All the audio is done through audio source and script here is an example of the script I added to the game to indicates [success](https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24)
+
 **Document the sound style.** 
+
+The sound effect in our game is all in realistic style. I decieded to the realistic sound effect because I want the player to be fully immersive into our Boba Shop. There is one sound effect that we need in our game that I couldn't find online so I record the [Boba dropping sound](https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/SoundEffect/topping.mp3) myself. 
 
 ## Gameplay Testing - Eriz Sartiga
 
