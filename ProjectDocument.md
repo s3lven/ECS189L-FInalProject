@@ -153,7 +153,7 @@ Sound Serializion:
 https://github.com/s3lven/ECS189L-FinalProject/blob/df59d9b6c759c2998c93dbd4fb640478df24c9d1/Assets/Scripts/Stations/Topping/Topping.cs#L12
 
 Sound in use: 
-https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24
+[https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/Scripts/Stations/BlendMinigame.cs#LL54C9-L54C24](https://github.com/s3lven/ECS189L-FinalProject/blob/272fbcb590f26b3bf1e9ee15cb2c8055da0a2d42/Assets/Scripts/Stations/Topping/Topping.cs#L35)
 
 **Document the sound style.** 
 
