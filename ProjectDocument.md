@@ -10,6 +10,8 @@ With a 2-D top-down view, you move your character strategically, grabbing ingred
 
 ## Gameplay Explanation ##
 
+As a quick side note, when loading this game into Unity, please start from the Title screen.
+
 After clicking the play button, players are immediately put into the game stage. Players have a set amount of time to fulfill orders one by one. Around the player are the stations that will help them gather the ingredients. There 8 stations are:
 - Tea Station: When interacting with this station, a panel of three buttons appear. From left to right, these buttons correspond to the black tea, the green tea, and the oolong tea. After pressing the button, the player will need to wait until the window disappears before moving on.
 - Syrup and Milk station: Upon interaction, an image of a machine is brought up with two buttons: the sugar and milk button. Players will have to visit the station on two separate interactions to get both sugar and milk.
@@ -34,10 +36,6 @@ Here is an example:
 *Procedural Terrain* - The background of the game consists of procedurally-generated terrain that is produced with Perlin noise. This terrain can be modified by the game at run-time via a call to its script methods. The intent is to allow the player to modify the terrain. This system is based on the component design pattern and the procedural content generation portions of the course. [The PCG terrain generation script](https://github.com/dr-jam/CameraControlExercise/blob/513b927e87fc686fe627bf7d4ff6ff841cf34e9f/Obscura/Assets/Scripts/TerrainGenerator.cs#L6).
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
-
-## Producer
-
-**Describe the steps you took in your role as producer. Typical items include group scheduling mechanism, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, depedency/task tracking, Gantt charts, etc.), and repository management methodology.**
 
 ## User Interface - Thomas Chen & Rongshan Gao
 
@@ -93,9 +91,6 @@ Even though my role was originally input, I ended up helping out with sprite cre
 - [Sugar and milk station] (https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Sugar%20and%20Milk%20Station.png)
 - [Player](https://github.com/s3lven/ECS189L-FinalProject/blob/main/Assets/Sprites/Stage/Player.png)
 ...
-
-
-
 
 
 ## Input -- Eriz Sartiga
