@@ -141,7 +141,7 @@ As someone who has programmed the minigames, I have done extensive gameplay test
 
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
-## Press Kit and Trailer - Jason Dao & ...
+## Press Kit and Trailer - Jason Dao & Thomas Chen
 
 Here is a link to the [press kit](https://jasondaok.itch.io/boba) and **trailer**. 
 
@@ -150,7 +150,11 @@ Here is a link to the [press kit](https://jasondaok.itch.io/boba) and **trailer*
 (Jason Dao was responsible for the press kit:)
 For the press kit, I helped to write the game description, features, set up the website loosely following the doPresskit() guidelines but for itch.io instead. I wanted to highlight our games unique features and organized the relevant information accordingly. I selected the viewable screenshots because I wanted to capture the essence of the game and its elements. As a result, I included scenes of the colorful main map, the minigames, and the UI. We aimed to pique the interest of any players and tried to convey the experience that they would expect by playing Papa's Bobaria.
 
-......
+Thomas Chen - Trailer
+
+Here is the link for the [Trailer](https://www.youtube.com/watch?v=rFbI6-QklOA)
+
+The primary objective of the trailer is to captivate the audience's interest and ignite their desire to play the game. Being a top-down 2D game that places significant emphasis on the gameplay. Throughout the trailer, the music choice is to fit with the style of our game. To ensure an immersive experience for the audience, allowing them to feel connected to the game's atmosphere. And also emphasizes the showcase of the core gameplay mechanics and sound effects for each part of the mini-games.
 
 
 ## Game Feel
