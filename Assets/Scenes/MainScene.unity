@@ -488,8 +488,8 @@ Canvas:
   m_GameObject: {fileID: 149094788}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -499,7 +499,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &149094792
 RectTransform:
@@ -1137,20 +1137,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1033431505611687091, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1033431505611687091, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1033431505611687091, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -345.315
+      value: -130.315
       objectReference: {fileID: 0}
     - target: {fileID: 1648878874661820315, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 56.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2597088977947666658, guid: 621a814dbff3c5c478db505264c70717, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 3766416610516079006, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 349
@@ -1251,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Score-UI
       objectReference: {fileID: 0}
+    - target: {fileID: 7045318547594232216, guid: 621a814dbff3c5c478db505264c70717, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7238570771418841421, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_margin.z
       value: 131.19371
@@ -1273,7 +1281,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9052665638475720467, guid: 621a814dbff3c5c478db505264c70717, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -24.57994
+      value: -24.579956
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1928,7 +1936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -580, y: 95}
+  m_AnchoredPosition: {x: -239, y: 144}
   m_SizeDelta: {x: 260.63, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126450001
