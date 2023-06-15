@@ -42,7 +42,7 @@ public class ToppingsMinigame : MonoBehaviour
     void Update()
     {
         // Stop the game from re-running if the topping is already loaded in the drink
-        // TODO: the "don't insert any more ingredients because they've already added it" needs to be consistent with all ingredients
+        //  the "don't insert any more ingredients because they've already added it" needs to be consistent with all ingredients
         if(isToppingLoaded)
         {
            CheckTopping();
@@ -60,12 +60,12 @@ public class ToppingsMinigame : MonoBehaviour
         {
             case "Boba_Topping":
                 toppings = ToppingsType.Boba;
-                break;
                 clip.Play();
+                break;
             case "LycheeJelly_Topping":
                 toppings = ToppingsType.LycheeJelly;
-                break;
                 clip.Play();
+                break;
             default:
                 Debug.Log("There is no topping called " + objectName);
                 break;

@@ -545,7 +545,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAPI'S BOBA BALLS
+  m_text: Papa's Bobaria
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7854040af71a40f4a9a42801b8281106, type: 2}
   m_sharedMaterial: {fileID: -7926752248879317174, guid: 7854040af71a40f4a9a42801b8281106, type: 2}

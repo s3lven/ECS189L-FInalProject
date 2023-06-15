@@ -58,6 +58,7 @@ public class OrderController : MonoBehaviour
         // SyrupPowder types are {None, Sugar, Milk}
         int[] milkRandomValues = {0, 2};
         int randomBlended = 0;
+        int randomShake = 0;
 
         // Choose one of the TeaTypes
         var randomTea = randomGen.Next(1, 4);
@@ -74,24 +75,29 @@ public class OrderController : MonoBehaviour
         // Choose to add ice
         var randomIce = randomGen.Next(0, 2);
         orderIce = randomIce != 0;
-        // Choose to be shaken. If not shaken, then blend if there's ice
-        var randomShake = randomGen.Next(0, 2);
-        // True = 1, False = 0
-        var randomShakeBool = randomShake != 0;
-        orderShaked = randomShakeBool;
-        // If randomShake is 0 and we have ice, we can blend
-        if ((!randomShakeBool) && (randomIce == 1))
+        // Check if there's ice, if so then check if you want to blend
+        if (randomIce == 1)
         {
-            randomBlended = 1;
+            randomBlended = randomGen.Next(0, 2);
         }
         else
         {
             randomBlended = 0;
         }
+        // If we don't want to blend, then we want to shake
+        if (randomBlended == 0)
+        {
+            randomShake = 1;
+        }
+        else
+        {
+            randomShake = 0;
+        }
 
+        orderShaked = randomShake != 0;
         orderBlended = randomBlended != 0;
 
-        Debug.Log("orderTea: " + orderTea);
+        // Debug.Log("orderTea: " + orderTea);
 
         order = 
             randomTea.ToString() +

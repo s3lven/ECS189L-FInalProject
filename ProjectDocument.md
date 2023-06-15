@@ -12,6 +12,9 @@ With a 2-D top-down view, you move your character strategically, grabbing ingred
 
 **In this section, explain how the game should be played. Treat this as a manual within a game. It is encouraged to explain the button mappings and the most optimal gameplay strategy.**
 
+After clicking the play button, players are immediately put into the game stage. Players have a set amount of time to fulfill orders one by one. Around the player are the stations that will help them gather the ingredients. There 8 stations are:
+- Tea Station: When interacting with this station, a panel of three buttons appear. From left to right, these buttons correspond to the black tea, the green tea, and the oolong tea. After pressing the button, the player will need to wait until the window disappears before moving on.
+- Syrup and Milk station: Upon interaction, an image of a machine is brought up with two buttons: 
 
 **If you did work that should be factored in to your grade that does not fit easily into the proscribed roles, add it here! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 

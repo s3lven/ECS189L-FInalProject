@@ -49,7 +49,7 @@ public class TrashDrink : MonoBehaviour
         }
         
         // Debug function
-        // drinkController.CheckDrink();
+        drinkController.CheckDrink();
         // Play sound here to signify completion
         
         

@@ -61,10 +61,10 @@ public class ChecklistController : MonoBehaviour
 
         }
         // List if there's any sugar and/or milk
-        string sugarName = (orderController.orderSugar != SyrupPowderType.None) ? "Sugar," : "";
-        string milkName = (orderController.orderMilk == SyrupPowderType.None) ? "" : "with Milk,";
+        string sugarName = (orderController.orderSugar != SyrupPowderType.None) ? "Sugar" : "";
+        string milkName = (orderController.orderMilk == SyrupPowderType.None) ? "" : "with Milk";
         // List if there's ice in there
-        string iceName = orderController.orderIce ? "Iced," : "";
+        string iceName = orderController.orderIce ? "Iced" : "";
         // List if it is blended or shaken
         string blendShakeName = orderController.orderShaked ? "Shaken" : "Blended";
         // Example: Jasmine Milk Tea with Sugar, Boba, No Ice, and Shaken

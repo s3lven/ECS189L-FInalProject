@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     // Components
-    [SerializeField] Rigidbody rigidbody;
+    [SerializeField] new Rigidbody rigidbody;
     Transform avatar;
 
     // Player Movement -- uses Unity's new Input System
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputAction interactionBinding;
     [SerializeField] LayerMask interactLayer;
     Vector2 mousePositionInput;
-    Camera camera;
+    new Camera camera;
 
     Scene currentScene;
 
