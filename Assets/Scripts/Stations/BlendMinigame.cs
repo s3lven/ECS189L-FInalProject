@@ -8,6 +8,9 @@ public class BlendMinigame : MonoBehaviour
     private PlayerController playerController;
     private DrinkController drinkController;
     public AudioSource clip;
+    public AudioSource success;
+    public float delay = 1;
+    float timer;
 
     public void PressButtonPanelClose()
     {
@@ -44,10 +47,17 @@ public class BlendMinigame : MonoBehaviour
 
     IEnumerator WaitButtonPressed()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         Debug.Log("Drink is blended!");
         // Play sound here to signify completion
         // drinkController.CheckDrink();
-        PressButtonPanelClose();
+        success.Play();
+        if (timer > delay)
+        {
+            timer += Time.deltaTime;
+            
+            PressButtonPanelClose();
+        }
+        //PressButtonPanelClose();
     }
 }
