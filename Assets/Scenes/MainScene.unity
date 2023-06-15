@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2386715909158569797, guid: 00c82fc48d1fb504a80bc20aadce86ae, type: 3}
       propertyPath: gameTime
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3683399262690991680, guid: 00c82fc48d1fb504a80bc20aadce86ae, type: 3}
       propertyPath: m_LocalScale.y

@@ -132,9 +132,8 @@ https://audio-joiner.com/
 ## Gameplay Testing - Eriz Sartiga
 
 As someone who has programmed the minigames, I have done extensive gameplay testing to try and account for edge cases in the minigames and overall interactions with the shop. To summarize:
-- The box colliders are programmed such that constantly running into the counter exhibits a weird "glitchy" movement. This is likely due to the player's 3D capsule collider instead of a 2D box collider.
+- The box colliders are programmed such that constantly running into the counter exhibits a weird "glitchy" movement. This is likely due to the player's 3D capsule collider instead of a 2D box collider. There is the possibility of the player interacting with a station while they're in this glitch and begin to glide to the right
 - There is a glitch on the toppings minigame where if the player quickly clicks on any of the topping without moving their mouse to any other slots (topping slots or cup slots), they accidentally add a topping into the grid layout. Thus, there is two elements in the layout and leads to unintended behavior.
-- There is a weird issue where the drink needs to be blended even though there is no ice in the drink. The scripts are written such that a drink can only be blended if ice is added and the drink is not being shaken. Further testing should be conducted on the OrderController.
 - The gameplay loop works as intended but needs better design to inform players about the process of their drink (i.e. a checklsit showing of what minigames they have done).
 - The music stops at the end of the game with no other sounds playing.
 
