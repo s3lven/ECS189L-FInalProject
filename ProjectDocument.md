@@ -157,7 +157,7 @@ Sound in use:
 
 **Document the sound style.** 
 
-The sound effect in our game is all in realistic style. I decieded to the realistic sound effect because I want the player to be fully immersive into our Boba Shop. There is one sound effect that we need in our game that I couldn't find online so I record the [Boba dropping sound](https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/SoundEffect/topping.mp3) myself. 
+The sound effect in our game is all in realistic style. I decieded to the realistic sound effect because I want the player to be fully immersive into our Boba Shop. In our game, the sound effects are vital in recreating the authentic ambiance of a bustling boba shop, captivating players and transporting them into the virtual world. And on the Background music chosic, at first I was thinking using the Cozy Jazz music for like bookstore and Cafe. But, they does really fit in to our game, then I switch the Background Music to what we have in the final game, which is Lofi, which I feel is perfectly fit to our game. During the assets finding stage, I found that there is one sound effect that we need in our game that I couldn't find online so I record the [Boba dropping sound](https://github.com/s3lven/ECS189L-FinalProject/blob/69b67321d94fc6abb37f063e2b9d110f193ef80b/Assets/SoundEffect/topping.mp3) myself. 
 
 ## Gameplay Testing - Eriz Sartiga
 
