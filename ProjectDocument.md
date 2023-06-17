@@ -186,9 +186,12 @@ Thomas Chen - Trailer
 
 Here is the link for the [Trailer](https://www.youtube.com/watch?v=rFbI6-QklOA)
 
-The primary objective of the trailer is to captivate the audience's interest and ignite their desire to play the game. Being a top-down 2D game that places significant emphasis on the gameplay. Throughout the trailer, the music choice is to fit with the style of our game. To ensure an immersive experience for the audience, allowing them to feel connected to the game's atmosphere. And also emphasizes the showcase of the core gameplay mechanics and sound effects for each part of the mini-games.
+The primary objective of the trailer is to captivate the audience's interest and ignite their desire to play the game. Being a top-down 2D game that places significant emphasis on the gameplay. Throughout the trailer, the music choice is to fit with the style of our game. To ensure an immersive experience for the audience, allowing them to feel connected to the game's atmosphere. And also emphasizes the showcase of the core gameplay mechanics and playable feature in each part of the mini-games.
 
 
-## Game Feel
+## Game Feel - Thomas Chen
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+
+## Audio
+During the game testing stage we found same problem related to the Game feel such as when a cercatin task is complete there does exist an indication telling the player if the task is complete or not, so I added the complete SoundEffect after a cercatin task is complete. But after adding this we found out that in the Mini-game the complete sound will not be play when the panel of the Mini-game closed, because our sound object is linked under the panel object. So we delay the soundEffect of the task and the panel closing time to make it work. So the complete sound will play after the task SoundEffect and then the panel close. https://github.com/s3lven/ECS189L-FinalProject/blob/7f3613f409d74e0d7acb4d569ecbd658a093193e/Assets/Scripts/Stations/BlendMinigame.cs#L54-60
